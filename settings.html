@@ -196,26 +196,64 @@
                                 
                                 <div class="flex items-center justify-between flex-col md:flex-row gap-2 w-full">
                   
-                                    <div class="mb-6 w-full md:w-1/2">
-                                            <label class="text-gray-700 font-medium mb-3 " for="fname">Country</label>
-                                            <input id="fname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded-md focus:outline-none" name="fname" autocomplete="off">
+                                    
+
+                                    <div class="mb-6 w-full md:w-1/2 relative ">
+                                        <label class="text-gray-700 font-medium mb-3" for="country">Country of Residence</label>
+                                        <div class="flex relative h-[50px] mt-2 w-full">
+
+                                            <div class="dropdown relative z-50 currency_form_dropdown" data-dropdown>
+                                                <button class="rounded-l-md inline-flex gap-2 items-center px-2 border-t bg-white border-l border-b  border-gray-200 text-neutral800 text-sm cursor-pointer h-[50px] grow" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-dropdown-btn >
+                                                    <!-- <span class="pointer-event-none"> -->
+                                                        <img src="images/Flag.png" class="pointer-event-none w-6 h-6"/>
+                                                    <!-- </span> -->
+                                                    NGN
+                                                    <span class="pointer-event-none ">
+                                                        <svg class="" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M7.99709 11.1999C7.53042 11.1999 7.06375 11.0199 6.71042 10.6666L2.36375 6.31993C2.17042 6.12659 2.17042 5.8066 2.36375 5.61326C2.55708 5.41993 2.87708 5.41993 3.07042 5.61326L7.41708 9.95993C7.73708 10.2799 8.25708 10.2799 8.57709 9.95993L12.9238 5.61326C13.1171 5.41993 13.4371 5.41993 13.6304 5.61326C13.8238 5.8066 13.8238 6.12659 13.6304 6.31993L9.28375 10.6666C8.93042 11.0199 8.46375 11.1999 7.99709 11.1999Z" fill="#9998A9"/>
+                                                        </svg>
+                                                    </span>
+                                                    
+                                                    
+                                                    
+                                                </button>
+
+                                                <div class="dropdown-menu  border-0 py-2 px-4 z-50 min-w-0 bg-neutral50" aria-labelledby="dropdownMenuButton" >
+                                                    <button class="dropdown-item flex items-center text-xs gap-2 py-2 text-neutral800 " type="button" >
+                                                        <img src="images/Flag.png"/>
+                                                        NGN
+                                                    </button>
+                                                    
+                                                </div>
+                                            </div>
+                                            <input id="country" type="text" class="block  h-full grow px-4 py-2  text-gray-700 bg-white border border-gray-200 focus:border-gray-300 rounded-r-md focus:outline-none transition duration-150 ease-in-out" name="country" autocomplete="off" >
+
+                                        </div>
+                                    </div>
+                                    <div class="mb-6 w-full md:w-1/2 relative ">
+                                        <label class="text-gray-700 font-medium mb-3" for="phone_number">Phone number</label>
+                                        <div class="flex relative h-[50px] mt-2">
+
+                                        
+                                            <span class="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-200 text-neutral800 shadow-sm text-sm">
+                                                +234
+                                            </span>
+                                            <input id="phone_number" type="text" class="block w-full h-full  px-4 py-2  text-gray-700 bg-white border border-gray-200 focus:border-gray-300 rounded-r-md focus:outline-none transition duration-150 ease-in-out" name="phone_number" autocomplete="off" placeholder="Your phone number">
+
+                                        </div>
                                     </div>
                   
-                                    <div class="mb-6 w-full md:w-1/2">
-                                            <label class="text-gray-700 font-medium mb-3" for="lname">Phone number</label>
-                                            <input id="lname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 focus:border-gray-300 rounded-md focus:outline-none transition duration-150 ease-in-out" name="lname" autocomplete="off">
-                                    </div>
                                 </div>
                                 <div class="flex items-center justify-between flex-col md:flex-row gap-2 w-full">
                   
                                     <div class="mb-6 w-full md:w-1/2">
-                                            <label class="text-gray-700 font-medium mb-3 " for="fname">State</label>
-                                            <input id="fname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded-md focus:outline-none" name="fname" autocomplete="off">
+                                            <label class="text-gray-700 font-medium mb-3 " for="state">State</label>
+                                            <input id="state" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded-md focus:outline-none" name="state" autocomplete="off">
                                     </div>
                   
                                     <div class="mb-6 w-full md:w-1/2">
-                                            <label class="text-gray-700 font-medium mb-3" for="lname">Street Address</label>
-                                            <input id="lname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 focus:border-gray-300 rounded-md focus:outline-none transition duration-150 ease-in-out" name="lname" autocomplete="off">
+                                            <label class="text-gray-700 font-medium mb-3" for="street">Street Address</label>
+                                            <input id="street" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 focus:border-gray-300 rounded-md focus:outline-none transition duration-150 ease-in-out" name="street" autocomplete="off">
                                     </div>
                                 </div>
                                 
