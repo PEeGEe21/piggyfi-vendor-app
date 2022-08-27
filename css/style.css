@@ -280,6 +280,13 @@ nav.invoice-tab a:hover {
   border-bottom: 3px #6e65d9 solid;
   color: #6e65d9;
   background: #f1f0fb;
+  transition: color  .2s ease;
+
+  /* padding: 30px; */
+}
+nav.invoice-tab a {
+  color: #6F6E83;
+  transition: color 300ms ease-out;
 
   /* padding: 30px; */
 }
@@ -563,7 +570,48 @@ nav.invoice-tab a:hover {
 
 }
 
-/* .pagination button:not(:disabled){
-  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+.settings_form{
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 0px 0px -1px rgba(0, 0, 0, 0.05);
 
+}
+.settings_form label{
+  font-size: 14px;
+
+}
+
+
+/* Style the tab */
+/* .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 } */
+
+/* Style the buttons that are used to open the tab content */
+/* .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+} */
+
+/* Change background color of buttons on hover */
+/* .tab button:hover {
+  background-color: #ddd;
+} */
+
+/* Create an active/current tablink class */
+/* .tab button.active {
+  background-color: #ccc;
+} */
+
+/* Style the tab content */   
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
