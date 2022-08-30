@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
+    <title>Dashboard</title>
     <link
     href="font/font/stylesheet.css"
     rel="stylesheet"
@@ -45,7 +45,7 @@
                             Overview
                         </span>
                     </a>
-                    <a class=" menu-item w-full font-thin uppercase text-gray_cl flex items-center p-3 px-4 my-3 transition-colors duration-200 ease-in justify-start hover:text-secondary" href="orders.html">
+                    <a class=" menu-item active w-full font-thin uppercase text-gray_cl flex items-center p-3 px-4 my-3 transition-colors duration-200 ease-in justify-start hover:text-secondary" href="orders.html">
                         
                         <span class="text-left px-3">
 
@@ -89,7 +89,7 @@
                             Ads
                         </span>
                     </a>
-                    <a class=" menu-item active w-full font-thin uppercase text-gray_cl flex items-center p-3 px-4 my-3 transition-colors duration-200 justify-start hover:text-secondary" href="settings.html">
+                    <a class=" menu-item w-full font-thin uppercase text-gray_cl flex items-center p-3 px-4 my-3 transition-colors duration-200 justify-start hover:text-secondary" href="settings.html">
                         <span class="text-left px-3">
                             
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,9 +113,15 @@
             <div class="main-box">
                 <div class="h-full pb-24 px-4 md:px-12">
                     <div class="flex items-center justify-between gap-1">
-                        <h1 class="text-3xl font-bold text-gray-800  ">
-                            Account Settings
-                        </h1>
+                        <a class="text-xl font-semibold text-neutral600 flex items-center " href="orders.html">
+                            <span class="mr-2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 12H5" stroke="#6F6E83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 19L5 12L12 5" stroke="#6F6E83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            Orders
+                        </a>
                         <div class=" px-1 flex flex-row gap-4 items-center">
                             <div class="flex items-center gap-2 bg-white px-3 py-2 rounded text-neutral800 font-normal">
                                 <span class="rounded-full p-2 h-8 w-8 text-sm w-full bg-secondary text-white flex items-center justify-center ">PB</span>
@@ -133,155 +139,136 @@
                     </div>
                     
                     <!-- flex flex-col md:flex-row  gap-0 overflow-x-auto invoice-tab border-b border-gray-200 bg-transparent min-w-full flex-wrap overflow-x-auto text-sm -->
-                    <div class="mt-10 mb-5">
-                        <nav class="grid grid-cols-4 gap-0 invoice-tab border-b border-gray-200 bg-transparent   text-sm w-full">
-                            <a href="" class=" active flex-grow  p-4 text-center flex items-center justify-center ">
-                                <div class=" ">
-
-                                    Profile
-                                </div>
-                            </a>
-                            <a href="settings-verification.html" class=" p-4 text-center flex-grow  flex items-center justify-center text-[#6F6E83]">
-                            <div class=" ">
-
-                                Verification
-                            </div>
-                            </a>
-                            <a href="payment-completed.html" class=" p-4 text-center  flex-grow items-center justify-center text-[#6F6E83]">
-                            <div class="">
-
-                                Payment method
-                            </div>
-                            </a>
-                            <a href="password.html" class=" p-4 text-center  flex-grow items-center justify-center text-[#6F6E83]">
-                            <div class=" ">
-
-                                Password
-                            </div>
-                            </a>
-
-                        </nav>
+                    <div class="mt-10 mb-5 text-neutral600 text-2xl font-semibold">
+                        Order #234eEDT
                     </div>
 
                     
 
-                    <div class="my-8 w-full space-y-4 md:space-x-4 md:space-y-0 ">
-                        <div class="mx-auto max-w-auto w-full w-full xl:w-[745px] settings_form ">
-                            <div class="p-8 bg-white rounded-lg ">
-                                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 my-6 w-full space-y-4 md:space-x-4 md:space-y-0  gap-6 ">
+                        <!-- <div class="w-full md:w-6/12 flex-col  md:space-y-4">
+                            <div class=" w-full bg-white relative overflow-hidden px-6 py-6 rounded">
+                                <div class="w-full border-0 border-gray-200 flex items-center justify-between pb-2">
+                                    <h4 class="text-xl  text-gray-700   font-semibold ">
+                                        Recent Activities
+                                    </h4>
 
-                                    <div class="mb-7">
-                                        <h3 class="text-xl font-semibold">Personal Details</h3>
-                                        <p class="text-neutral600 text-sm">Kindly provide your valid details </p>
-                                    </div>
-                                    <div class="flex items-center justify-between flex-col md:flex-row gap-2 w-full">
-                  
-                                        <div class="mb-6 w-full md:w-1/2">
-                                                <label class="text-gray-700 font-medium mb-3 " for="fname">First Legal name</label>
-                                                <input id="fname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded-md focus:outline-none" name="fname" autocomplete="off">
-                                        </div>
-                      
-                                        <div class="mb-6 w-full md:w-1/2">
-                                                <label class="text-gray-700 font-medium mb-3" for="lname">Last Legal Name</label>
-                                                <input id="lname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 focus:border-gray-300 rounded-md focus:outline-none transition duration-150 ease-in-out" name="lname" autocomplete="off">
-                                        </div>
-                                    </div>
-
-
-                                <div class="mb-6">
-                                    <label class="text-gray-700 font-medium mb-3" for="email">Email Address</label>
-                                    <input id="email" type="email" placeholder="Enter your email address" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="email" min="3" autocomplete="off">
-                                  
+                                    <a href="" class="text-sm text-secondary">View all</a>
                                 </div>
                                 
-                                <div class="flex items-center justify-between flex-col md:flex-row gap-2 w-full">
-                  
-                                    
-
-                                    <div class="mb-6 w-full md:w-1/2 relative ">
-                                        <label class="text-gray-700 font-medium mb-3" for="country">Country of Residence</label>
-                                        <div class="flex relative h-[50px] mt-2 w-full">
-
-                                            <div class="dropdown relative  currency_form_dropdown" data-dropdown>
-                                                <button class="rounded-l-md inline-flex gap-2 items-center px-2 border-t bg-white border-l border-b  border-gray-200 text-neutral800 text-sm cursor-pointer h-[50px] grow" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-dropdown-btn >
-                                                    <!-- <span class="pointer-event-none"> -->
-                                                        <img src="images/Flag.png" class="pointer-events-none w-6 h-6"/>
-                                                    <!-- </span> -->
-                                                    NGN
-                                                    <span class="pointer-events-none ">
-                                                        <svg class="" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M7.99709 11.1999C7.53042 11.1999 7.06375 11.0199 6.71042 10.6666L2.36375 6.31993C2.17042 6.12659 2.17042 5.8066 2.36375 5.61326C2.55708 5.41993 2.87708 5.41993 3.07042 5.61326L7.41708 9.95993C7.73708 10.2799 8.25708 10.2799 8.57709 9.95993L12.9238 5.61326C13.1171 5.41993 13.4371 5.41993 13.6304 5.61326C13.8238 5.8066 13.8238 6.12659 13.6304 6.31993L9.28375 10.6666C8.93042 11.0199 8.46375 11.1999 7.99709 11.1999Z" fill="#9998A9"/>
-                                                        </svg>
-                                                    </span>
-                                                    
-                                                    
-                                                    
-                                                </button>
-
-                                                <div class="dropdown-menu  border-0 py-2 px-4 z-50 min-w-0 bg-neutral50" aria-labelledby="dropdownMenuButton" >
-                                                    <button class="dropdown-item flex items-center text-xs gap-2 py-2 text-neutral800 " type="button" >
-                                                        <img src="images/Flag.png" class="w-4 h-4"/>
-                                                        NGN
-                                                    </button>
-                                                    
-                                                </div>
-                                            </div>
-                                            <input id="country" type="text" class="block  h-full grow px-4 py-2  text-gray-700 bg-white border border-gray-200 focus:border-gray-300 rounded-r-md focus:outline-none transition duration-150 ease-in-out" name="country" autocomplete="off" >
-
-                                        </div>
-                                    </div>
-                                    <div class="mb-6 w-full md:w-1/2 relative ">
-                                        <label class="text-gray-700 font-medium mb-3" for="phone_number">Phone number</label>
-                                        <div class="flex relative h-[50px] mt-2">
-
-                                        
-                                            <span class="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-200 text-neutral800 shadow-sm text-sm">
-                                                +234
-                                            </span>
-                                            <input id="phone_number" type="text" class="block w-full h-full  px-4 py-2  text-gray-700 bg-white border border-gray-200 focus:border-gray-300 rounded-r-md focus:outline-none transition duration-150 ease-in-out" name="phone_number" autocomplete="off" placeholder="Your phone number">
-
-                                        </div>
-                                    </div>
-                  
-                                </div>
-                                <div class="flex items-center justify-between flex-col md:flex-row gap-2 w-full">
-                  
-                                    <div class="mb-6 w-full md:w-1/2">
-                                            <label class="text-gray-700 font-medium mb-3 " for="state">State</label>
-                                            <input id="state" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded-md focus:outline-none" name="state" autocomplete="off">
-                                    </div>
-                  
-                                    <div class="mb-6 w-full md:w-1/2">
-                                            <label class="text-gray-700 font-medium mb-3" for="street">Street Address</label>
-                                            <input id="street" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 focus:border-gray-300 rounded-md focus:outline-none transition duration-150 ease-in-out" name="street" autocomplete="off">
-                                    </div>
-                                </div>
-                                
-                  
-                  
-                      
-                      
-                                <!-- Submit button -->
-                                <div class="flex items-end justify-end">
-                                    <button type="submit" class="inline-block px-7 py-3 bg-secondary text-white font-medium text-sm leading-snug capitalize rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-                                        
-                                        >
-                                        Save Changes
-                                    </button>
-                                </div>
-                                
-                      
-                                
-                              </form>
                             </div>
                             
-                            
+                        </div> -->
+                        <div class=" w-full   h-full bg-white   relative rounded-md">
+                            <div class="w-full h-full px-6 py-6 space-y-4 md:space-x-0 md:space-y-7">
+                                <div class="flex items-center justify-start gap-3 mb-5">
+                                    <h4 class="text-base text-neutral800 ">Payment Status</h4>
 
+                                    <div class="relative  flex items-center md:justify-start font-normal inline-block text-successGreen600 leading-tight ">
+                                        <span class="bg-successGreen50 flex items-center rounded-full justify-start py-2 px-5 ">
+                                            <span class="h-2 w-4 text-successGreen600 rounded-full text-center">
+                                                <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="3" cy="3" r="3" fill="currentColor"/>
+                                                </svg>
+                                            </span>
+                                            Completed
+                                        </span>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start  justify-between gap-6">
+                                    <p class="text-sm  text-neutral800  font-medium ">
+                                        Date
+                                    </p>
+                                    <p class="text-sm   text-neutral800  font-normal ">
+                                        12/08/2022
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p class="text-sm  text-neutral800 font-medium ">
+                                        Currency Pair
+                                    </p>
+                                    <p class="text-sm  text-neutral800 font-normal ">
+                                        cUSD/NGN
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p class="text-sm  text-neutral800 font-medium ">
+                                        Amount
+                                    </p>
+                                    <p class="text-sm  text-neutral800 font-normal ">
+                                        $100
+                                    </p>
+                                </div>
+                            </div>
+                            
                         </div>
+
+                        <div class=" w-full  h-full bg-white   relative rounded-md">
+                            <div class="w-full h-full px-6 py-6 space-y-4 md:space-x-0 md:space-y-7">
+                                <div class="flex items-center justify-start gap-3 mb-5">
+                                    <h4 class="text-base text-neutral800 ">Customer Details</h4>
+                                </div>
+                                <div class="flex items-start  justify-between gap-6">
+                                    <p class="text-sm  text-neutral800  font-medium ">
+                                        Email
+                                    </p>
+                                    <p class="text-sm   text-neutral800  font-medium ">
+                                        rebeccawilson@gmail.com
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p class="text-sm  text-neutral800 font-medium ">
+                                        Payment Method
+                                    </p>
+                                    <p class="text-sm  text-neutral800 font-normal ">
+                                        Bank Transfer
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p class="text-sm  text-neutral800 font-medium ">
+                                        Rating
+                                    </p>
+                                    <p class="text-sm  text-neutral800 font-normal ">
+                                        Positive
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p class="text-sm  text-neutral800 font-medium ">
+                                        Feedback
+                                    </p>
+                                    <p class="text-sm  text-neutral800 font-normal ">
+                                        No feedback
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- <div class=" w-full md:w-6/12  h-full bg-white   relative">
+                            <div class="w-full h-full px-8 py-6">
+                                <div class="flex items-center justify-between px-6">
+                                    <h4 class="text-xl  text-gray-700   font-semibold ">
+                                        Active ads
+                                    </h4>
+                                    <h4 class="text-xl  text-gray-700   font-semibold ">
+                                        Active ads
+                                    </h4>
+
+                                </div>
+                            </div>
+                            
+                        </div> -->
+
+
                     </div>
+
+                    
+
 
                 </div>
 
+            
                 
             </div>
 
