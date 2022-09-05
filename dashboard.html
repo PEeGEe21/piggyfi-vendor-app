@@ -201,7 +201,7 @@
                         </div>
                         <div class="font-normal flex items-center justify-end flex-row gap-3 w-6/12">
                             
-                            <button class="flex items-center text-secondary text-sm border-secondary border mt-4 px-5 py-2 rounded h-12">
+                            <button class="flex items-center text-secondary text-sm border-secondary border mt-4 px-5 py-2 rounded h-12" id="listaddbtn">
                                 <span class="mr-2">
                                     <svg width="16" height="16" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.5 4.16675V15.8334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -211,7 +211,7 @@
                                 
                                 List ads
                             </button>
-                            <button class="flex items-center text-sm mt-4 px-5 py-2 rounded h-12  bg-secondary hover:bg-secondary/80 text-white transition ease-in duration-200 text-center text-sm font-semibold shadow-md   rounded flex items-center justify-center w-3/6 ">
+                            <button class="flex items-center text-sm mt-4 px-5 py-2 rounded h-12  bg-secondary hover:bg-secondary/80 text-white transition ease-in duration-200 text-center text-sm font-semibold shadow-md   rounded flex items-center justify-center w-3/6 " id="addliquiditybtn">
                                 
                                 Add liquidity
                                 
@@ -277,102 +277,98 @@
                     </div>
 
 
-                        <div class=" w-full    relative my-6 ">
-                            
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
-                                <div class="flex items-start py-5 px-5 mb-2  text-sm shadow-box justify-between bg-white border-0 rounded w-full ">
-                                    <div class="flex grow flex-col gap-5">
-                                            <p class="text-neutral700 font-normal text-base">All Trades</p>
-                                            <p class="text-neutral800 font-bold text-xl">4244</p>
-                                    </div>
-                                    <span class="flex items-start p-1 bg-secondary50">
-                                        
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M18.1 17.75H5.89999C3.57999 17.75 2.25 16.42 2.25 14.1V2C2.25 1.59 2.59 1.25 3 1.25H21C21.41 1.25 21.75 1.59 21.75 2V14.1C21.75 16.42 20.42 17.75 18.1 17.75ZM3.75 2.75V14.1C3.75 15.59 4.40999 16.25 5.89999 16.25H18.09C19.58 16.25 20.24 15.59 20.24 14.1V2.75H3.75Z" fill="#6E65D9"/>
-                                            <path d="M22 2.75H2C1.59 2.75 1.25 2.41 1.25 2C1.25 1.59 1.59 1.25 2 1.25H22C22.41 1.25 22.75 1.59 22.75 2C22.75 2.41 22.41 2.75 22 2.75Z" fill="#6E65D9"/>
-                                            <path d="M8.00222 22.75C7.72222 22.75 7.46221 22.6 7.33221 22.34C7.14221 21.97 7.29223 21.52 7.67223 21.33L11.2522 19.54V17C11.2522 16.59 11.5922 16.25 12.0022 16.25C12.4122 16.25 12.7522 16.59 12.7522 17V20C12.7522 20.28 12.5922 20.54 12.3322 20.67L8.33221 22.67C8.23221 22.72 8.11222 22.75 8.00222 22.75Z" fill="#6E65D9"/>
-                                            <path d="M15.996 22.7499C15.886 22.7499 15.7661 22.7199 15.6661 22.6699L11.6661 20.6699C11.2961 20.4799 11.146 20.0299 11.326 19.6599C11.516 19.2899 11.966 19.1399 12.336 19.3199L16.336 21.3199C16.706 21.5099 16.856 21.9599 16.676 22.3299C16.536 22.5999 16.266 22.7499 15.996 22.7499Z" fill="#6E65D9"/>
-                                            <path d="M7.497 11.7499C7.287 11.7499 7.06701 11.6599 6.91701 11.4799C6.64701 11.1599 6.69699 10.6899 7.01699 10.4199L10.167 7.78994C10.457 7.54994 10.827 7.44994 11.177 7.50994C11.537 7.56994 11.847 7.78991 12.037 8.10991L13.087 9.85991L16.017 7.41994C16.337 7.15994 16.807 7.19992 17.077 7.51992C17.347 7.83992 17.297 8.30991 16.977 8.57991L13.827 11.2099C13.537 11.4499 13.167 11.5499 12.817 11.4899C12.457 11.4299 12.147 11.2099 11.957 10.8899L10.907 9.13994L7.97701 11.5799C7.83701 11.6899 7.667 11.7499 7.497 11.7499Z" fill="#6E65D9"/>
-                                            </svg>
-                                            
-                                        </span>
+                    <div class=" w-full    relative my-6 ">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
+                            <div class="flex items-start py-5 px-5 mb-2  text-sm shadow-box justify-between bg-white border-0 rounded w-full ">
+                                <div class="flex grow flex-col gap-5">
+                                        <p class="text-neutral700 font-normal text-base">All Trades</p>
+                                        <p class="text-neutral800 font-bold text-xl">4244</p>
                                 </div>
-
-                                <div class="flex items-start py-5 px-5 mb-2  text-sm shadow-box justify-between bg-white border-0 rounded w-full ">
-                                    <div class="flex grow flex-col gap-5">
-                                            <p class="text-neutral700 font-normal text-base">Buy</p>
-                                            <p class="text-neutral800 font-bold text-xl">2052</p>
-                                    </div>
-                                    <div class="flex grow flex-col gap-5">
-                                            <p class="text-neutral700 font-normal text-base">Sell</p>
-                                            <p class="text-neutral800 font-bold text-xl">2192</p>
-                                    </div>
-                                    <span class="flex items-start p-1 bg-secondary50">
+                                <span class="flex items-start p-1 bg-secondary50">
+                                    
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.1 17.75H5.89999C3.57999 17.75 2.25 16.42 2.25 14.1V2C2.25 1.59 2.59 1.25 3 1.25H21C21.41 1.25 21.75 1.59 21.75 2V14.1C21.75 16.42 20.42 17.75 18.1 17.75ZM3.75 2.75V14.1C3.75 15.59 4.40999 16.25 5.89999 16.25H18.09C19.58 16.25 20.24 15.59 20.24 14.1V2.75H3.75Z" fill="#6E65D9"/>
+                                        <path d="M22 2.75H2C1.59 2.75 1.25 2.41 1.25 2C1.25 1.59 1.59 1.25 2 1.25H22C22.41 1.25 22.75 1.59 22.75 2C22.75 2.41 22.41 2.75 22 2.75Z" fill="#6E65D9"/>
+                                        <path d="M8.00222 22.75C7.72222 22.75 7.46221 22.6 7.33221 22.34C7.14221 21.97 7.29223 21.52 7.67223 21.33L11.2522 19.54V17C11.2522 16.59 11.5922 16.25 12.0022 16.25C12.4122 16.25 12.7522 16.59 12.7522 17V20C12.7522 20.28 12.5922 20.54 12.3322 20.67L8.33221 22.67C8.23221 22.72 8.11222 22.75 8.00222 22.75Z" fill="#6E65D9"/>
+                                        <path d="M15.996 22.7499C15.886 22.7499 15.7661 22.7199 15.6661 22.6699L11.6661 20.6699C11.2961 20.4799 11.146 20.0299 11.326 19.6599C11.516 19.2899 11.966 19.1399 12.336 19.3199L16.336 21.3199C16.706 21.5099 16.856 21.9599 16.676 22.3299C16.536 22.5999 16.266 22.7499 15.996 22.7499Z" fill="#6E65D9"/>
+                                        <path d="M7.497 11.7499C7.287 11.7499 7.06701 11.6599 6.91701 11.4799C6.64701 11.1599 6.69699 10.6899 7.01699 10.4199L10.167 7.78994C10.457 7.54994 10.827 7.44994 11.177 7.50994C11.537 7.56994 11.847 7.78991 12.037 8.10991L13.087 9.85991L16.017 7.41994C16.337 7.15994 16.807 7.19992 17.077 7.51992C17.347 7.83992 17.297 8.30991 16.977 8.57991L13.827 11.2099C13.537 11.4499 13.167 11.5499 12.817 11.4899C12.457 11.4299 12.147 11.2099 11.957 10.8899L10.907 9.13994L7.97701 11.5799C7.83701 11.6899 7.667 11.7499 7.497 11.7499Z" fill="#6E65D9"/>
+                                        </svg>
                                         
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M22 8.5C22 12.09 19.09 15 15.5 15C15.33 15 15.15 14.99 14.98 14.98C14.73 11.81 12.19 9.26999 9.01999 9.01999C9.00999 8.84999 9 8.67 9 8.5C9 4.91 11.91 2 15.5 2C19.09 2 22 4.91 22 8.5Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M15 15.5C15 19.09 12.09 22 8.5 22C4.91 22 2 19.09 2 15.5C2 11.91 4.91 9 8.5 9C8.67 9 8.84999 9.00999 9.01999 9.01999C12.19 9.26999 14.73 11.81 14.98 14.98C14.99 15.15 15 15.33 15 15.5Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M5.59 2H3C2.45 2 2 2.45 2 3V5.59C2 6.48 3.07999 6.92999 3.70999 6.29999L6.29999 3.70999C6.91999 3.07999 6.48 2 5.59 2Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M18.4136 22H21.0036C21.5536 22 22.0036 21.55 22.0036 21V18.41C22.0036 17.52 20.9236 17.07 20.2936 17.7L17.7036 20.29C17.0836 20.92 17.5236 22 18.4136 22Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                            
-                                        </span>
+                                    </span>
+                            </div>
+
+                            <div class="flex items-start py-5 px-5 mb-2  text-sm shadow-box justify-between bg-white border-0 rounded w-full ">
+                                <div class="flex grow flex-col gap-5">
+                                        <p class="text-neutral700 font-normal text-base">Buy</p>
+                                        <p class="text-neutral800 font-bold text-xl">2052</p>
                                 </div>
-
-
-                                <div class="flex items-start py-5 px-5 mb-2  text-sm shadow-box justify-between bg-white border-0 rounded w-full ">
-                                    <div class="flex grow flex-col gap-5">
-                                            <p class="text-neutral700 font-normal text-base">Disputes</p>
-                                            <p class="text-neutral800 font-bold text-xl">9</p>
-                                    </div>
-                                    <span class=" flex items-start p-1 bg-secondary50">
-                                        
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 9V14" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M11.9994 21.41H5.93944C2.46944 21.41 1.01944 18.93 2.69944 15.9L5.81944 10.28L8.75944 5.00003C10.5394 1.79003 13.4594 1.79003 15.2394 5.00003L18.1794 10.29L21.2994 15.91C22.9794 18.94 21.5194 21.42 18.0594 21.42H11.9994V21.41Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M11.9922 17H12.0012" stroke="#6E65D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                            
-                                            
-                                        </span>
+                                <div class="flex grow flex-col gap-5">
+                                        <p class="text-neutral700 font-normal text-base">Sell</p>
+                                        <p class="text-neutral800 font-bold text-xl">2192</p>
                                 </div>
-
-                                <div class="flex items-start py-5 px-5 mb-2  text-sm shadow-box justify-between bg-white border-0 rounded w-full ">
-                                    <div>
-                                        <h4 class="mb-4">Ratings</h4>
-                                        <div class="flex justify-between items-center gap-3">
-
+                                <span class="flex items-start p-1 bg-secondary50">
+                                    
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22 8.5C22 12.09 19.09 15 15.5 15C15.33 15 15.15 14.99 14.98 14.98C14.73 11.81 12.19 9.26999 9.01999 9.01999C9.00999 8.84999 9 8.67 9 8.5C9 4.91 11.91 2 15.5 2C19.09 2 22 4.91 22 8.5Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M15 15.5C15 19.09 12.09 22 8.5 22C4.91 22 2 19.09 2 15.5C2 11.91 4.91 9 8.5 9C8.67 9 8.84999 9.00999 9.01999 9.01999C12.19 9.26999 14.73 11.81 14.98 14.98C14.99 15.15 15 15.33 15 15.5Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M5.59 2H3C2.45 2 2 2.45 2 3V5.59C2 6.48 3.07999 6.92999 3.70999 6.29999L6.29999 3.70999C6.91999 3.07999 6.48 2 5.59 2Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M18.4136 22H21.0036C21.5536 22 22.0036 21.55 22.0036 21V18.41C22.0036 17.52 20.9236 17.07 20.2936 17.7L17.7036 20.29C17.0836 20.92 17.5236 22 18.4136 22Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                         
-                                            <div class="flex  flex-col gap-2">
-                                                <p class="text-gray_cl font-normal text-sm">Positive</p>
-                                                <p class="text-neutral800 font-bold text-xl">801</p>
-                                            </div>
-                                            <div class="flex  flex-col gap-2">
-                                                <p class="text-gray_cl font-normal text-sm">Negative</p>
-                                                <p class="text-neutral800 font-bold text-xl">24</p>
-                                            </div>
+                                    </span>
+                            </div>
+
+
+                            <div class="flex items-start py-5 px-5 mb-2  text-sm shadow-box justify-between bg-white border-0 rounded w-full ">
+                                <div class="flex grow flex-col gap-5">
+                                        <p class="text-neutral700 font-normal text-base">Disputes</p>
+                                        <p class="text-neutral800 font-bold text-xl">9</p>
+                                </div>
+                                <span class=" flex items-start p-1 bg-secondary50">
+                                    
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 9V14" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M11.9994 21.41H5.93944C2.46944 21.41 1.01944 18.93 2.69944 15.9L5.81944 10.28L8.75944 5.00003C10.5394 1.79003 13.4594 1.79003 15.2394 5.00003L18.1794 10.29L21.2994 15.91C22.9794 18.94 21.5194 21.42 18.0594 21.42H11.9994V21.41Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M11.9922 17H12.0012" stroke="#6E65D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        
+                                        
+                                    </span>
+                            </div>
+
+                            <div class="flex items-start py-5 px-5 mb-2  text-sm shadow-box justify-between bg-white border-0 rounded w-full ">
+                                <div>
+                                    <h4 class="mb-4">Ratings</h4>
+                                    <div class="flex justify-between items-center gap-3">
+
+                                    
+                                        <div class="flex  flex-col gap-2">
+                                            <p class="text-gray_cl font-normal text-sm">Positive</p>
+                                            <p class="text-neutral800 font-bold text-xl">801</p>
+                                        </div>
+                                        <div class="flex  flex-col gap-2">
+                                            <p class="text-gray_cl font-normal text-sm">Negative</p>
+                                            <p class="text-neutral800 font-bold text-xl">24</p>
                                         </div>
                                     </div>
+                                </div>
+                                
+                                <span class=" flex items-start p-1 bg-secondary50">
                                     
-                                    <span class=" flex items-start p-1 bg-secondary50">
-                                        
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M19 9C19 10.45 18.57 11.78 17.83 12.89C16.75 14.49 15.04 15.62 13.05 15.91C12.71 15.97 12.36 16 12 16C11.64 16 11.29 15.97 10.95 15.91C8.96 15.62 7.25 14.49 6.17 12.89C5.43 11.78 5 10.45 5 9C5 5.13 8.13 2 12 2C15.87 2 19 5.13 19 9Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M21.2471 18.4699L19.5971 18.8599C19.2271 18.9499 18.9371 19.2299 18.8571 19.5999L18.5071 21.0699C18.3171 21.8699 17.2971 22.1099 16.7671 21.4799L11.9971 15.9999L7.22715 21.4899C6.69715 22.1199 5.67715 21.8799 5.48715 21.0799L5.13715 19.6099C5.04715 19.2399 4.75715 18.9499 4.39715 18.8699L2.74715 18.4799C1.98715 18.2999 1.71715 17.3499 2.26715 16.7999L6.16715 12.8999C7.24715 14.4999 8.95715 15.6299 10.9471 15.9199C11.2871 15.9799 11.6371 16.0099 11.9971 16.0099C12.3571 16.0099 12.7071 15.9799 13.0471 15.9199C15.0371 15.6299 16.7471 14.4999 17.8271 12.8999L21.7271 16.7999C22.2771 17.3399 22.0071 18.2899 21.2471 18.4699Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12.5819 5.98L13.1719 7.15999C13.2519 7.31999 13.4619 7.48 13.6519 7.51L14.7219 7.68999C15.4019 7.79999 15.5619 8.3 15.0719 8.79L14.2419 9.61998C14.1019 9.75998 14.0219 10.03 14.0719 10.23L14.3119 11.26C14.5019 12.07 14.0719 12.39 13.3519 11.96L12.3519 11.37C12.1719 11.26 11.8719 11.26 11.6919 11.37L10.6919 11.96C9.97193 12.38 9.54193 12.07 9.73193 11.26L9.97193 10.23C10.0119 10.04 9.94193 9.75998 9.80193 9.61998L8.97193 8.79C8.48193 8.3 8.64193 7.80999 9.32193 7.68999L10.3919 7.51C10.5719 7.48 10.7819 7.31999 10.8619 7.15999L11.4519 5.98C11.7419 5.34 12.2619 5.34 12.5819 5.98Z" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
+                                    </svg>
 
-                                            
-                                            
-                                    </span>
-                                </div>
-
+                                        
+                                        
+                                </span>
                             </div>
+
                         </div>
-
-
-
-
+                    </div>
 
 
                     <div class="flex my-6 items-stretch w-full space-y-4 md:space-x-4 md:space-y-0 flex-col md:flex-row">
@@ -408,6 +404,636 @@
 
 
                 </div>
+
+
+
+
+
+                 <!-- Overlay element -->
+            <div id="overlay" class="fixed hidden z-[1001] w-screen h-screen inset-0 bg-neutral800 bg-opacity-90"></div>
+
+
+            <!-- Choose where do you want to withdraw to? w-96 md:w-[40em] max-w-lg-->
+            <div id="addLiquidityModal" class="dialog hidden  fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-full max-w-[500px]  bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg overflow-y-auto  h-auto   max-h-full">
+                <div class="">
+        
+                <div class="flex items-start justify-between mb-5">
+
+                    <div class="grow">
+                        <h1 class="text-xl font-semibold">Add Liquidity</h1>
+                    </div>
+
+                    
+                    <button class="btn btn-sm btn-label-brand btn-bold flex items-start" id="close">
+                           <span class="pointer-events-none">
+                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                           </span>             
+                        
+                    </button>
+
+                </div>
+                    <div class="py-5  w-full flex gap-4 flex-col">
+                        <button class="border border-gray-300 py-4 px-3 h-15 flex items-center justify-start gap-3 rounded focus:outline-none hover:border-gray-400 transition duration-150 ease-in-out"  id="bankAccountBtn">
+                            <span class="mr-2 pointer-events-none">
+                                <!-- <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.4946 3.36662L28.4946 8.16659C28.9613 8.35326 29.3346 8.91325 29.3346 9.40658V13.8333C29.3346 14.5666 28.7346 15.1666 28.0013 15.1666H4.0013C3.26797 15.1666 2.66797 14.5666 2.66797 13.8333V9.40658C2.66797 8.91325 3.04131 8.35326 3.50798 8.16659L15.508 3.36662C15.7746 3.25995 16.228 3.25995 16.4946 3.36662Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M29.3346 29.8333H2.66797V25.8333C2.66797 25.1 3.26797 24.5 4.0013 24.5H28.0013C28.7346 24.5 29.3346 25.1 29.3346 25.8333V29.8333Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5.33203 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.668 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21.332 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M26.668 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1.33203 29.8335H30.6654" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16 11.8335C17.1046 11.8335 18 10.9381 18 9.8335C18 8.72893 17.1046 7.8335 16 7.8335C14.8954 7.8335 14 8.72893 14 9.8335C14 10.9381 14.8954 11.8335 16 11.8335Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> -->
+                                <img src="images/wallet-3.png" alt="Pay with Transfer"/>
+                                    
+                            </span> 
+                            <div class="flex flex-col items-start">
+                               <span>Pay with Transfer</span> 
+                               <span class="text-gray_cl text-sm">Pay from external wallet</span>
+
+                            </div> 
+                            
+                        </button>
+                        <button class=" border border-gray-300 py-4 h-15 flex items-center justify-start gap-3 px-3 rounded focus:outline-none hover:border-gray-400 transition duration-150 ease-in-out" id="walletAddressBtn">
+                            <span class="mr-2 pointer-events-none">
+                                <!-- <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.332 16.3667H9.33203C8.78536 16.3667 8.33203 15.9134 8.33203 15.3667C8.33203 14.82 8.78536 14.3667 9.33203 14.3667H17.332C17.8787 14.3667 18.332 14.82 18.332 15.3667C18.332 15.9134 17.8787 16.3667 17.332 16.3667Z" fill="#292D32"/>
+                                    <path d="M2.66797 16.3666C2.1213 16.3666 1.66797 15.9133 1.66797 15.3666V9.20662C1.66797 5.93996 4.32131 3.28662 7.58797 3.28662H15.0813C18.508 3.28662 21.0013 5.56662 21.0013 8.69995C21.0013 9.24662 20.548 9.69995 20.0013 9.69995C19.4546 9.69995 19.0013 9.24662 19.0013 8.69995C19.0013 6.35328 16.9613 5.28662 15.0813 5.28662H7.58797C5.42797 5.28662 3.66797 7.04662 3.66797 9.20662V15.3666C3.66797 15.9266 3.21464 16.3666 2.66797 16.3666Z" fill="#292D32"/>
+                                    <path d="M21.3346 29.7002H8.0013C4.50797 29.7002 1.66797 26.8602 1.66797 23.3669V14.0335C1.66797 10.5402 4.50797 7.7002 8.0013 7.7002H21.3346C24.828 7.7002 27.668 10.5402 27.668 14.0335V15.9668C27.668 16.5135 27.2146 16.9668 26.668 16.9668H25.2279C24.7613 16.9668 24.3347 17.1401 24.028 17.4601L24.0146 17.4735C23.5746 17.9135 23.4013 18.5268 23.5613 19.1268C23.7613 19.8735 24.548 20.4202 25.428 20.4202H26.668C27.2146 20.4202 27.668 20.8735 27.668 21.4202V23.3535C27.668 26.8602 24.828 29.7002 21.3346 29.7002ZM8.0013 9.7002C5.61464 9.7002 3.66797 11.6469 3.66797 14.0335V23.3669C3.66797 25.7535 5.61464 27.7002 8.0013 27.7002H21.3346C23.7213 27.7002 25.668 25.7535 25.668 23.3669V22.4335H25.428C23.628 22.4335 22.0679 21.3002 21.6279 19.6602C21.2813 18.3668 21.6547 16.9935 22.6013 16.0601C23.2947 15.3535 24.2279 14.9668 25.2279 14.9668H25.668V14.0335C25.668 11.6469 23.7213 9.7002 21.3346 9.7002H8.0013Z" fill="#292D32"/>
+                                    <path d="M27.9585 22.4335H25.3852C23.3719 22.4335 21.6652 20.9402 21.5052 19.0202C21.3986 17.9135 21.7986 16.8335 22.5986 16.0468C23.2653 15.3535 24.2119 14.9668 25.2119 14.9668H27.9453C29.2519 14.9668 30.3186 16.0202 30.3186 17.3268V20.0735C30.3319 21.3802 29.2652 22.4335 27.9585 22.4335ZM25.2252 16.9668C24.7586 16.9668 24.3319 17.1401 24.0253 17.4601C23.6386 17.8335 23.4519 18.3402 23.5052 18.8468C23.5719 19.7268 24.4252 20.4335 25.3852 20.4335H27.9585C28.1585 20.4335 28.3319 20.2735 28.3319 20.0735V17.3268C28.3319 17.1268 28.1585 16.9668 27.9585 16.9668H25.2252Z" fill="#292D32"/>
+                                    </svg>
+                                     -->
+                                    
+                                <img src="images/Image.png" alt="Pay with Metamask"/>
+
+                            </span> Pay with Metamask
+                        </button>
+                    </div>
+
+                    <div class="flex items-center justify-center mt-10">
+                        <img src="images/TEXT.png" alt="Pay with Metamask"/>
+                        
+                    </div>
+                
+                </div>
+            </div>
+            <!-- End of Choose where do you want to withdraw to? -->
+
+            <!-- Add currency dropdown -->
+
+
+
+
+
+
+            
+
+<!-- w-full md:w-[40em] max-w-lg md:max-w-xl -->
+
+            <!-- Bank --- List new ads -->
+            <div id="listAddModal" class="dialog hidden fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full md:max-w-[500px] lg:max-w-xl bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg overflow-y-auto  h-full  max-h-full scrollbar-change">
+                <div class="my-4">
+
+                    <div class="modal-header flex items-center justify-between pb-5">
+                        
+                        <span class=" text-primary text-xl">List new ads</span>
+
+                        <button id="close" class="p-2">
+                            <span class="pointer-events-none">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            
+                        </button>
+                        
+                    </div>
+                    <div class="mt-4">
+                        <form>
+                            <div class="mb-6">
+                                <div class="flex justify-between items-center">                                
+                                    <label class="text-gray-700 font-medium" for="company_name">Select currency</label>
+                                    
+                                </div>
+                                <!-- <input id="company_name" type="text" placeholder="Enter your company’s name" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="company_name" autocomplete="off"> -->
+                                <div class=" dropdown relative  grow large-dropdown mb-4 " data-large-dropdown >
+                                    <button class="w-full bg-white h-12 focus:outline-none active:outline-none  flex items-center justify-between border border-neutral100 focus:border-gray_cl active:border-gray_cl px-4 py-3 mt-2 rounded" id="" data-large-dropdown-btn type="button" >
+                                        <span class="pointer-events-none text-neutral600">Select currency to list as ads</span>
+                                        <span class="pointer-events-none ">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-3 ml-2" role="img" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                
+                                                    <path d="M8.00099 11.7C7.53432 11.7 7.06766 11.5201 6.71432 11.1667L2.36766 6.82005C2.17432 6.62672 2.17432 6.30672 2.36766 6.11338C2.56099 5.92005 2.88099 5.92005 3.07432 6.11338L7.42099 10.4601C7.74099 10.7801 8.26099 10.7801 8.58099 10.4601L12.9277 6.11338C13.121 5.92005 13.441 5.92005 13.6343 6.11338C13.8277 6.30672 13.8277 6.62672 13.6343 6.82005L9.28766 11.1667C8.93432 11.5201 8.46766 11.7 8.00099 11.7Z" fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+
+                                    
+
+                                    <!-- <div class="mt-5 md:mt-0 w-full md:w-1/3 grow"> -->
+                                        <div class=" dropdown-menu large-dropdown px-3 py-3 shadow-box rounded-md w-full h-40 overflow-y-auto scrollbar-change ">
+                                                    
+                                            
+                                            <div class="">
+                                                <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                    <div class="flex items-center justify-start gap-2 pr-2">
+                                                             <img src="images/Celo Dollar (CUSD).png">   
+                                                    </div>
+                                                    <div class="flex grow flex-col justify-start items-start text-left">
+                                                            <p class="text-neutral700 font-normal text-base">cUSD / NGN</p>
+                                                    </div>
+                                                </button>
+                                                <button class="flex items-start mb-3 py-2 px-1 hover:bg-gray-100 text-sm justify-between bg-white border-0 rounded-lg w-full coming_soon" type="button" disabled>
+                                                    <div class="flex items-center justify-start gap-2 pr-2">
+                                                        <img src="images/cEUR 1.png">
+                                                    </div>
+                                                    <div class="flex grow flex-row justify-between items-center text-left">
+                                                            <p class=" font-normal text-base">BUSD / NGN</p>
+                                                            <span class=" text-neutral600 font-thin text-sm">(Coming soon)</span>
+                                                    </div>
+                                                </button>
+                                                <button class="flex items-start mb-3 py-2 px-1 hover:bg-gray-100 text-sm justify-between bg-white border-0 rounded-lg w-full coming_soon" type="button" disabled>
+                                                    <div class="flex items-center justify-start gap-2 pr-2">
+                                                        <img src="images/cEUR 1.png">
+                                                    </div>
+                                                    <div class="flex grow flex-row justify-between items-center text-left">
+                                                            <p class=" font-normal text-base">USDT / NGN</p>
+                                                            <span class="text-neutral600 font-thin text-sm">(Coming soon)</span>
+                                                    </div>
+                                                </button>
+                                            
+                                            </div>
+                                    </div>
+                                    <!-- </div> -->
+
+                                
+                                </div>
+
+                                
+                                
+                            </div>
+                            <div class="mb-6">
+                                <div class="flex justify-between items-center">                                
+                                    <label class="text-gray-700 font-medium" for="company_name">Type of ads</label>
+                                    
+                                </div>
+                                <!-- <input id="company_name" type="text" placeholder="Enter your company’s name" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="company_name" autocomplete="off"> -->
+                                <div class=" dropdown relative  grow large-dropdown mb-4 " data-large-dropdown >
+                                    <button class="w-full bg-white h-12 focus:outline-none active:outline-none  flex items-center justify-between border border-neutral100 focus:border-gray_cl active:border-gray_cl px-4 py-3 mt-2 rounded" id="" data-large-dropdown-btn type="button" >
+                                        <span class="pointer-events-none text-neutral600">Select ads</span>
+                                        <span class="pointer-events-none ">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-3 ml-2" role="img" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                
+                                                    <path d="M8.00099 11.7C7.53432 11.7 7.06766 11.5201 6.71432 11.1667L2.36766 6.82005C2.17432 6.62672 2.17432 6.30672 2.36766 6.11338C2.56099 5.92005 2.88099 5.92005 3.07432 6.11338L7.42099 10.4601C7.74099 10.7801 8.26099 10.7801 8.58099 10.4601L12.9277 6.11338C13.121 5.92005 13.441 5.92005 13.6343 6.11338C13.8277 6.30672 13.8277 6.62672 13.6343 6.82005L9.28766 11.1667C8.93432 11.5201 8.46766 11.7 8.00099 11.7Z" fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+
+                                    
+
+                                    <!-- <div class="mt-5 md:mt-0 w-full md:w-1/3 grow"> -->
+                                        <div class=" dropdown-menu large-dropdown px-3 py-3 shadow-box rounded-md w-full h-auto overflow-y-auto scrollbar-change ">
+                                            <div class="">
+                                                <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                    <div class="flex items-center justify-start gap-2 pr-2">
+                                                        <span>
+
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M2.91927 18.9583H17.0859C17.4276 18.9583 17.7109 18.6749 17.7109 18.3333C17.7109 17.9916 17.4276 17.7083 17.0859 17.7083H2.91927C2.5776 17.7083 2.29427 17.9916 2.29427 18.3333C2.29427 18.6749 2.5776 18.9583 2.91927 18.9583Z" fill="#4A4957"/>
+                                                                <path d="M4.16354 15.2083C4.32188 15.2083 4.48021 15.15 4.60521 15.025L16.2719 3.35828C16.5135 3.11662 16.5135 2.71662 16.2719 2.47495C16.0302 2.23328 15.6302 2.23328 15.3885 2.47495L3.72188 14.1416C3.48021 14.3833 3.48021 14.7833 3.72188 15.025C3.84688 15.15 4.00521 15.2083 4.16354 15.2083Z" fill="#4A4957"/>
+                                                                <path d="M15.8359 12.1001C16.1776 12.1001 16.4609 11.8167 16.4609 11.4751V2.91675C16.4609 2.57508 16.1776 2.29175 15.8359 2.29175H7.2776C6.93594 2.29175 6.6526 2.57508 6.6526 2.91675C6.6526 3.25841 6.93594 3.54175 7.2776 3.54175H15.2109V11.4751C15.2109 11.8167 15.4943 12.1001 15.8359 12.1001Z" fill="#4A4957"/>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex grow flex-col justify-start items-start text-left">
+                                                            <p class="text-neutral700 font-normal text-base">Buy</p>
+                                                    </div>
+                                                </button>
+                                                <button class="flex items-start mb-3 py-2 px-1 hover:bg-gray-100 text-sm justify-between bg-white border-0 rounded-lg w-full " type="button">
+                                                    <div class="flex items-center justify-start gap-2 pr-2">
+                                                        <span>
+
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M4.16979 15.2083C4.01146 15.2083 3.85313 15.15 3.72812 15.025C3.48646 14.7833 3.48646 14.3833 3.72812 14.1416L15.3948 2.47495C15.6365 2.23328 16.0365 2.23328 16.2781 2.47495C16.5198 2.71662 16.5198 3.11662 16.2781 3.35828L4.61146 15.025C4.48646 15.15 4.32813 15.2083 4.16979 15.2083Z" fill="#4A4957"/>
+                                                                <path d="M12.7224 15.2082H4.16406C3.8224 15.2082 3.53906 14.9249 3.53906 14.5832V6.0249C3.53906 5.68324 3.8224 5.3999 4.16406 5.3999C4.50573 5.3999 4.78906 5.68324 4.78906 6.0249V13.9582H12.7224C13.0641 13.9582 13.3474 14.2416 13.3474 14.5832C13.3474 14.9249 13.0641 15.2082 12.7224 15.2082Z" fill="#4A4957"/>
+                                                                <path d="M17.0807 18.9583H2.91406C2.5724 18.9583 2.28906 18.6749 2.28906 18.3333C2.28906 17.9916 2.5724 17.7083 2.91406 17.7083H17.0807C17.4224 17.7083 17.7057 17.9916 17.7057 18.3333C17.7057 18.6749 17.4224 18.9583 17.0807 18.9583Z" fill="#4A4957"/>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex grow flex-col justify-start items-start text-left">
+                                                            <p class="text-neutral700 font-normal text-base">Sell</p>
+                                                    </div>
+                                                </button>
+                                            
+                                            </div>
+                                    </div>
+                                    <!-- </div> -->
+
+                                
+                                </div>
+
+                                
+                                
+                            </div>
+
+                            <div class="mb-6 w-full">
+                                        <label class="text-gray-700 font-medium mb-3 " for="fname">Exchange rate e.g 638 NGN / $1</label>
+                                        <input id="fname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded focus:outline-none" name="fname" autocomplete="off" placeholder="What would be your exchange rate?">
+                                </div>
+                            <div class="mb-6 w-full">
+                                        <label class="text-gray-700 font-medium mb-3 " for="fname">Payout method</label>
+                                        <input id="fname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded focus:outline-none" name="fname" autocomplete="off" placeholder="How do you want to collect money for this ad?">
+                                </div>
+                            <div class="mb-6 w-full">
+                                        <label class="text-gray-700 font-medium mb-3 " for="fname">Total Liquidity amount</label>
+                                        <input id="fname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded focus:outline-none" name="fname" autocomplete="off" placeholder="How much liquidity do you want to provide?">
+                                        <span class="text-sm flex items-center justify-end my-3 text-neutral700 font-normal">Balance ~ $100,000.62</span>
+                                </div>
+                                
+                            <div class="flex items-center justify-between flex-col md:flex-row gap-2 w-full">
+                  
+                                <div class="mb-6 w-full md:w-1/2">
+                                        <label class="text-gray-700 font-medium mb-3 " for="fname">Minimum limit</label>
+                                        <input id="fname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded focus:outline-none" name="fname" autocomplete="off" placeholder="What is your min. limit?">
+                                </div>
+                                
+              
+                                <div class="mb-6 w-full md:w-1/2">
+                                        <label class="text-gray-700 font-medium mb-3" for="lname">Maximum limit</label>
+                                        <input id="lname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 focus:border-gray-300 rounded focus:outline-none transition duration-150 ease-in-out" name="lname" autocomplete="off" placeholder="What is your max. limit?">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-6">
+                                <label class="text-gray-700 font-medium mb-3" for="amount">Additional instructions</label>
+                                <textarea class="w-full border border-neutral100 focus:outline-none active:outline-none p-3 textarea" placeholder="Such as bank not accepted e.t.c. Sensor words such as phone number and personal information " rows="5"></textarea>
+                                <!-- <input id="amount" type="text" placeholder="How much do you want to withdraw?" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="amount" autocomplete="off"> -->
+                                
+                            </div>
+                  
+                           <div class="flex mx-auto w-full md:w-5/6">
+                               <button class="block bg-secondary w-full h-[50px] text-white bg-secondary transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded flex items-center justify-center" type="button" onclick=onWithdraw()>List ads</button>
+                           </div>
+                              
+                          </form>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>        
+            <!-- End of Where do you want to withdraw to? -->
+
+
+
+            <!-- Add a new Bank -->
+            <div class="dialog hidden fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40em] max-w-lg md:max-w-xl bg-white rounded-md newBankAccountForm px-8 py-6 space-y-5 drop-shadow-lg overflow-y-auto  h-auto   max-h-full" id="">
+                <div class="">
+
+                    <div class="modal-header flex items-center justify-between pb-5">
+                        
+                        <span class=" text-primary text-xl">Add new bank</span>
+
+                        <button id="close" class="p-2">
+                            <span class="pointer-events-none">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            
+                        </button>
+                        
+                    </div>
+                    <div class="mt-4">
+                        <form>
+                            <div class="mb-6">
+                                <label class="text-gray-700 font-medium mb-3" for="bank_name">Bank Name</label>
+                                <input id="bank_name" type="text" placeholder="What is the name of the bank?" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="bank_name" autocomplete="off">
+                                
+                            </div>
+                            <div class="mb-6">
+                                <label class="text-gray-700 font-medium mb-3" for="account_name">Account Name</label>
+                                <input id="account_name" type="text" placeholder="Enter the name on account" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="account_name" autocomplete="off">
+                                
+                            </div>
+                            <div class="mb-6">
+                                <label class="text-gray-700 font-medium mb-3" for="account_number">Account Number</label>
+                                <input id="account_number" type="text" placeholder="Enter the account number" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="account_number" autocomplete="off">
+                                
+                            </div>
+
+                           <div class="flex mx-auto w-full md:w-1/2">
+                               <button class="block bg-secondary w-full h-[50px] text-white bg-secondary transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded flex items-center justify-center" type="submit" >Add bank</button>
+                           </div>
+                            
+                        </form>
+                    </div>
+
+                    
+        
+                    
+
+                   
+                    
+                </div>
+            </div> 
+            <!-- End of Add a new Bank -->
+
+
+
+
+
+            <!--Start of Wallet-->
+
+                <!-- Wallet --- Where do you want to withdraw to? -->
+                <div id="walletAddressForm" class="dialog hidden fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40em] max-w-lg md:max-w-xl bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg overflow-y-auto  h-auto   max-h-full">
+                    <div class="">
+
+                        <div class="modal-header flex items-center justify-between pb-5">
+                            
+                            <span class=" text-primary text-xl">Where do you want to withdraw to?</span>
+
+                            <button id="close" class="p-2">
+                                <span class="pointer-events-none">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                
+                            </button>
+                            
+                        </div>
+                        <div class="mt-4">
+                            <form>
+                                <div class="mb-6">
+                                    <select class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="company_name">
+                                        <option value="Wallet address">
+                                            <span class="mr-2">
+                                                <img src="images/cEUR 1.png"/>
+                                                <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.4946 3.36662L28.4946 8.16659C28.9613 8.35326 29.3346 8.91325 29.3346 9.40658V13.8333C29.3346 14.5666 28.7346 15.1666 28.0013 15.1666H4.0013C3.26797 15.1666 2.66797 14.5666 2.66797 13.8333V9.40658C2.66797 8.91325 3.04131 8.35326 3.50798 8.16659L15.508 3.36662C15.7746 3.25995 16.228 3.25995 16.4946 3.36662Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M29.3346 29.8333H2.66797V25.8333C2.66797 25.1 3.26797 24.5 4.0013 24.5H28.0013C28.7346 24.5 29.3346 25.1 29.3346 25.8333V29.8333Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M5.33203 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M10.668 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M16 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M21.332 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M26.668 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M1.33203 29.8335H30.6654" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M16 11.8335C17.1046 11.8335 18 10.9381 18 9.8335C18 8.72893 17.1046 7.8335 16 7.8335C14.8954 7.8335 14 8.72893 14 9.8335C14 10.9381 14.8954 11.8335 16 11.8335Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                    
+                                            </span> Wallet address
+                                        </option>
+                                        <option>
+                                            Bank account
+                                        </option>
+                                    </select>
+                                    
+                                </div>
+                                <div class="mb-6">
+                                    <div class="flex justify-between items-center">                                
+                                        <label class="text-gray-700 font-medium" for="company_name">Choose wallet address</label>
+                                        <button class="text-sm text-secondary flex items-center" id="newWalletAddressBtn" type="button">
+                                            <span class="mr-2 pointer-events-none">
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.5 3.33325V12.6666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3.83203 8H13.1654" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                            </span>
+                                            add new address
+                                        </button>
+                                    </div>
+                                    <input id="wallet_address" type="text" placeholder="Select or add new wallet address" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="wallet_address" autocomplete="off">
+                                    
+                                </div>
+                                <div class="mb-6">
+                                    <div class="flex justify-between items-center">                                
+                                        <label class="text-gray-700 font-medium" for="company_name">Select currency</label>
+                                        
+                                    </div>
+                                    <!-- <input id="company_name" type="text" placeholder="Enter your company’s name" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="company_name" autocomplete="off"> -->
+                                    <div class=" dropdown relative  grow large-dropdown mb-4 " data-large-dropdown >
+                                        <button class="w-full bg-white h-12 focus:outline-none active:outline-none  flex items-center justify-between border border-neutral100 focus:border-gray_cl active:border-gray_cl px-4 py-3 mt-2 rounded-lg" id="" data-large-dropdown-btn type="button" >
+                                            <span class="pointer-events-none text-neutral600">Select currency to withdraw</span>
+                                            <span class="pointer-events-none ">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-3 ml-2" role="img" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    
+                                                        <path d="M8.00099 11.7C7.53432 11.7 7.06766 11.5201 6.71432 11.1667L2.36766 6.82005C2.17432 6.62672 2.17432 6.30672 2.36766 6.11338C2.56099 5.92005 2.88099 5.92005 3.07432 6.11338L7.42099 10.4601C7.74099 10.7801 8.26099 10.7801 8.58099 10.4601L12.9277 6.11338C13.121 5.92005 13.441 5.92005 13.6343 6.11338C13.8277 6.30672 13.8277 6.62672 13.6343 6.82005L9.28766 11.1667C8.93432 11.5201 8.46766 11.7 8.00099 11.7Z" fill="currentColor"></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+    
+                                        
+    
+                                        <!-- <div class="mt-5 md:mt-0 w-full md:w-1/3 grow"> -->
+                                            <div class=" dropdown-menu large-dropdown px-3 py-3 shadow-box rounded-md w-full h-40 overflow-y-auto scrollbar-change ">
+                                                        
+                                                <div class="relative rounded-full  items-center flex w-full h-12 my-2 ">
+                                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none h-full">
+                                                        <span class="text-gray-500 px-3">
+                                                            <svg width="22" height="22" viewBox="0 0 20 20" class="mr-3 pr-2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#9998A9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M17.5 17.5L13.875 13.875" stroke="#9998A9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" name="price" id="price" class="border border-gray-300 py-2 px-4  block w-full pl-12 pr-12 sm:text-sm rounded-full h-full focus:outline-none focus:border-gray-400" placeholder="search currency" autocomplete="off"/>
+                                                    
+                                                </div>
+                                                <div class="mt-3 py-4">
+                                                    <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                        <div class="flex items-center justify-start gap-2 pr-2">
+                                                                 <img src="images/Celo Dollar (CUSD).png">   
+                                                        </div>
+                                                        <div class="flex grow flex-col justify-start items-start text-left">
+                                                                <p class="text-neutral700 font-normal text-base">cReal</p>
+                                                                <p class="text-neutral600 font-thin text-sm">$1 = 1cUSD</p>
+                                                        </div>
+                                                    </button>
+                                                    <button class="flex items-start mb-3 py-2 px-1 hover:bg-gray-100 text-sm justify-between bg-white border-0 rounded-lg w-full " type="button">
+                                                        <div class="flex items-center justify-start gap-2 pr-2">
+                                                        <img src="images/Celo (CELO)__21.png">
+                                                    </div>
+                                                        <div class="flex grow flex-col justify-start items-start text-left">
+                                                                <p class="text-neutral700 font-normal text-base">cReal</p>
+                                                                <p class="text-neutral600 font-thin text-sm">$1 = 1cUSD</p>
+                                                        </div>
+                                                    </button>
+                                                    <button class="flex items-start mb-3 py-2 px-1 hover:bg-gray-100 text-sm justify-between bg-white border-0 rounded-lg w-full " type="button">
+                                                        <div class="flex items-center justify-start gap-2 pr-2">
+                                                            <img src="images/cEUR 1.png">
+                                                        </div>
+                                                        <div class="flex grow flex-col justify-start items-start text-left">
+                                                                <p class="text-neutral700 font-normal text-base">cReal</p>
+                                                                <p class="text-neutral600 font-thin text-sm">$1 = 1cUSD</p>
+                                                        </div>
+                                                    </button>
+                                                    <button class="flex items-start py-2 px-1 hover:bg-gray-100 text-sm justify-between bg-white border-0 rounded-lg w-full " type="button">
+                                                        <div class="flex items-center justify-start gap-2 pr-2">
+                                                            <img src="images/cREAL 1.png">
+                                                        </div>
+                                                        <div class="flex grow flex-col justify-start items-start text-left">
+                                                                <p class="text-neutral700 font-normal text-base">cReal</p>
+                                                                <p class="text-neutral600 font-thin text-sm">$1 = 1cUSD</p>
+                                                        </div>
+                                                    </button>
+                                                
+                                                </div>
+                                        </div>
+                                        <!-- </div> -->
+    
+                                    
+                                    </div>
+    
+                                    
+                                    
+                                </div>
+                                <div class="mb-6">
+                                    <label class="text-gray-700 font-medium mb-3" for="amount">Amount</label>
+                                    <input id="amount" type="text" placeholder="How much do you want to withdraw?" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="amount" autocomplete="off">
+                                    
+                                </div>
+                    
+                            <div class="flex mx-auto w-full md:w-1/2">
+                                <button class="block bg-secondary w-full h-[50px] text-white bg-secondary transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded flex items-center justify-center" type="button" onclick=onWithdraw() >Withdraw</button>
+                            </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+                <!-- End of Where do you want to withdraw to? -->
+
+                <!-- Add a new Wallet -->
+                <div class="dialog hidden fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40em] max-w-lg md:max-w-xl bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg overflow-y-auto  h-auto   max-h-full newWalletAddressForm">
+                    <div class="">
+
+                        <div class="modal-header flex items-center justify-between pb-5">
+                            
+                            <span class=" text-primary text-xl">Add new wallet address</span>
+
+                            <button id="close" class="p-2">
+                                <span class="pointer-events-none">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                
+                            </button>
+                            
+                        </div>
+                        <div class="mt-4">
+                            <form >
+                                <div class="mb-6">
+                                    <label class="text-gray-700 font-medium mb-3" for="network">Select Network</label>
+                                    <input id="network" type="text" placeholder="What is the name of the bank?" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="network" autocomplete="off">
+                                    
+                                </div>
+                                <div class="mb-6">
+                                    <label class="text-gray-700 font-medium mb-3" for="wallet_name">Your wallet name</label>
+                                    <input id="wallet_name" type="text" placeholder="Enter the name on account" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="wallet_name" autocomplete="off">
+                                    
+                                </div>
+                                <div class="mb-6">
+                                    <label class="text-gray-700 font-medium mb-3" for="wallet_address">Your wallet address</label>
+                                    <input id="wallet_address" type="text" placeholder="Enter the account number" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="wallet_address" autocomplete="off">
+                                    
+                                </div>
+
+                            <div class="flex mx-auto w-full md:w-1/2">
+                                <button class="block bg-secondary w-full h-[50px] text-white bg-secondary transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded flex items-center justify-center" type="button" onclick=onSubmit() >Add wallet address</button>
+                            </div>
+                                
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div> 
+                <!-- End of Add a new Bank -->
+
+            <!--End of Wallet-->
+
+
+
+
+
+                <!-- Success -->
+                    <div class="dialog hidden fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40em] max-w-lg  bg-white rounded-md px-4 py-6 space-y-5 drop-shadow-lg overflow-y-auto  h-auto   max-h-full success">
+                        <div class="">
+
+                            <div class="flex items-center justify-between flex-col pb-5 gap-6">
+                                <h1 class=" text-neutral800 text-3xl">Success</h1>
+                            
+                                <div>
+                                    <span>
+
+                                        <svg width="66" height="62" viewBox="0 0 66 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="30.4219" width="6.01711" height="17.7346" rx="3.00856" fill="#6E65D9"/>
+                                            <rect x="30.4219" y="43.4502" width="6.01711" height="17.7346" rx="3.00856" fill="#D3D1F4"/>
+                                            <rect x="47.793" y="31.0361" width="5.91155" height="18.0513" rx="2.95577" transform="rotate(-90 47.793 31.0361)" fill="#D3D1F4"/>
+                                            <rect x="0.410156" y="31.0361" width="5.91155" height="18.0513" rx="2.95577" transform="rotate(-90 0.410156 31.0361)" fill="#D3D1F4"/>
+                                            <rect width="5.96456" height="17.8937" rx="2.98228" transform="matrix(0.713336 -0.700822 0.713336 0.700822 9.88672 9.95312)" fill="#D3D1F4"/>
+                                            <rect width="5.96456" height="17.8937" rx="2.98228" transform="matrix(0.713336 0.700822 0.713336 -0.700822 9.88672 49.7695)" fill="#D3D1F4"/>
+                                            <rect width="5.96456" height="17.8937" rx="2.98228" transform="matrix(-0.713336 -0.700822 -0.713336 0.700822 54.8789 9.95312)" fill="#D3D1F4"/>
+                                            <rect width="5.96456" height="17.8937" rx="2.98228" transform="matrix(-0.713336 0.700822 -0.713336 -0.700822 54.8789 49.7695)" fill="#D3D1F4"/>
+                                        </svg>
+    
+                                    </span>
+                                </div>
+                                <p>Address added succesfully!</p>
+                            </div>
+                            
+                        </div>
+                    </div> 
+                <!-- End of Add a new Bank -->
+
+
+
+                <!-- Transaction in Progress.... -->
+                    <div class="dialog hidden fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40em] max-w-lg  bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg overflow-y-auto  h-auto   max-h-full withdraw" id="">
+                        <div class="">
+
+                            <div class="flex items-center justify-between flex-col pb-5 gap-6">
+                                <h1 class=" text-neutral800 text-3xl">Transaction in Progress....</h1>
+                            
+                                <div>
+                                    <span>
+
+                                        <svg width="66" height="62" viewBox="0 0 66 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="30.4219" width="6.01711" height="17.7346" rx="3.00856" fill="#6E65D9"/>
+                                            <rect x="30.4219" y="43.4502" width="6.01711" height="17.7346" rx="3.00856" fill="#D3D1F4"/>
+                                            <rect x="47.793" y="31.0361" width="5.91155" height="18.0513" rx="2.95577" transform="rotate(-90 47.793 31.0361)" fill="#D3D1F4"/>
+                                            <rect x="0.410156" y="31.0361" width="5.91155" height="18.0513" rx="2.95577" transform="rotate(-90 0.410156 31.0361)" fill="#D3D1F4"/>
+                                            <rect width="5.96456" height="17.8937" rx="2.98228" transform="matrix(0.713336 -0.700822 0.713336 0.700822 9.88672 9.95312)" fill="#D3D1F4"/>
+                                            <rect width="5.96456" height="17.8937" rx="2.98228" transform="matrix(0.713336 0.700822 0.713336 -0.700822 9.88672 49.7695)" fill="#D3D1F4"/>
+                                            <rect width="5.96456" height="17.8937" rx="2.98228" transform="matrix(-0.713336 -0.700822 -0.713336 0.700822 54.8789 9.95312)" fill="#D3D1F4"/>
+                                            <rect width="5.96456" height="17.8937" rx="2.98228" transform="matrix(-0.713336 0.700822 -0.713336 -0.700822 54.8789 49.7695)" fill="#D3D1F4"/>
+                                        </svg>
+    
+                                    </span>
+                                </div>
+                                <p class="text-center">Your Payment is in Progress. It would take about an hour to get your payment</p>
+                                <div class="flex mx-auto w-full mt-4 ">
+                                    <a href="pending-withdrawal.html" class="block bg-secondary w-full h-[50px] text-white bg-secondary transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded flex items-center justify-center" type="submit" >Back to home</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div> 
+                <!-- End of Add a new Bank -->
 
             
                 

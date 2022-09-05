@@ -103,36 +103,45 @@ document.addEventListener('click', (e) => {
 })
 
 document.addEventListener('click', (e) => {
-    const personalInfo = e.target.matches("#personal_info");
-    const newClient = e.target.matches("#newClient");
+    const listaddbtn = e.target.matches("#listaddbtn");
+    const addliquiditybtn = e.target.matches("#addliquiditybtn");
+    // const newClient = e.target.matches("#newClient");
 
-    const closebtn = e.target.matches("#closeButton");
+    const closebtn = e.target.matches("#close");
 
-    let personalInfoModal = document.querySelector('#personalInfoModal');
-    let clientForm = document.querySelector('#client_form');
+    let listAddModal = document.querySelector('#listAddModal');
+    let addLiquidityModal = document.querySelector('#addLiquidityModal');
+    // let clientForm = document.querySelector('#client_form');
 
 
     let overlay = document.querySelector('#overlay');
-    let header = document.querySelector('.header');
+    // let header = document.querySelector('.header');
 
-    if(personalInfo){
+    if(listaddbtn){
         
         // personalInfoModal.classList.toggle('show')
-        personalInfoModal.classList.remove('hidden');
+        listAddModal.classList.remove('hidden');
+        listAddModal.classList.add('fade-in');
         overlay.classList.remove('hidden');
-        header.classList.remove('sticky');
+        overlay.classList.add('fade-in');
+        // header.classList.remove('sticky');
     }else if(closebtn){
         
-        personalInfoModal.classList.add('hidden');
-        clientForm.classList.add('hidden');
+        listAddModal.classList.add('hidden');
+        // clientForm.classList.add('hidden');
+        addLiquidityModal.classList.add('hidden');
 
         overlay.classList.add('hidden');
-        header.classList.add('sticky');
+        // header.classList.add('sticky');
         
-    } else if(newClient){
-        clientForm.classList.remove('hidden');
+    } else if(addliquiditybtn){
+        addLiquidityModal.classList.remove('hidden');
+        addLiquidityModal.classList.add('fade-in');
+
         overlay.classList.remove('hidden');
-        header.classList.remove('sticky');
+        overlay.classList.add('fade-in');
+
+        // header.classList.remove('sticky');
     }
     // if(!isLargeDropdownButton && e.target.closest('[data-large-dropdown]') != null) return
 
@@ -147,12 +156,13 @@ document.addEventListener('click', (e) => {
 
 
 document.addEventListener('click', (e) => {
-    const withdrawButton = e.target.matches("#withdraw"); //main withdraw button
+    const payoutDetBtn = e.target.matches("#payoutDetBtn"); //main withdraw button
     const closebtn = e.target.matches("#close"); //close main withdraw button
 
 
     const bankAccountBtn = e.target.matches("#bankAccountBtn"); //main bankAccountBtn button
-    const newBankAccountBtn = e.target.matches("#newBankAccountBtn"); //main newBankAccountBtn button
+
+    const addNewBankBtn = e.target.matches("#addNewBankBtn"); //main newBankAccountBtn button
 
 
     const walletAddressBtn = e.target.matches("#walletAddressBtn"); //wallet address button
@@ -161,35 +171,37 @@ document.addEventListener('click', (e) => {
 
 
     let overlay = document.querySelector('#overlay'); //overlay
-    let header = document.querySelector('.header'); //header
+    // let header = document.querySelector('.header');
 
     let step1 = document.querySelector('#step1');
 
     //forms
-    let bankAccountForm = document.querySelector('#bankAccountForm');
-    let newBankAccountForm = document.querySelector('.newBankAccountForm');
+    let step1_form = document.querySelector('#step1_form');
+    let newBankForm = document.querySelector('#newBankForm');
     let walletAddressForm = document.querySelector('#walletAddressForm');
     let newWalletAddressForm = document.querySelector('.newWalletAddressForm');
     // let successfull = document.querySelector('.success');
 
 
 
-    if(withdrawButton){
+    if(payoutDetBtn){
         // personalInfoModal.classList.toggle('show')
-        step1.classList.remove('hidden');
+        step1_form.classList.remove('hidden');
+        step1_form.classList.add('fade-in');
+        overlay.classList.add('fade-in');
         overlay.classList.remove('hidden');
-        header.classList.remove('sticky');
+        // header.classList.remove('sticky');
     }else if(bankAccountBtn){
         step1.classList.add('hidden');
         bankAccountForm.classList.remove('hidden');
         // overlay.classList.add('hidden');
         // header.classList.add('sticky'); 
-    }else if(newBankAccountBtn){
+    }else if(addNewBankBtn){
         // console.log("heyyyy")
         // // step1.classList.add('hidden');
-        bankAccountForm.classList.add('hidden');
+        step1.classList.add('hidden');
 
-        newBankAccountForm.classList.remove('hidden');
+        newBankForm.classList.remove('hidden');
 
         // overlay.classList.add('hidden');
         // header.classList.add('sticky'); 
@@ -207,13 +219,13 @@ document.addEventListener('click', (e) => {
         // overlay.classList.add('hidden');
         // header.classList.add('sticky'); 
     }else if(closebtn){
-        step1.classList.add('hidden');
+        step1_form.classList.add('hidden');
         overlay.classList.add('hidden');
-        header.classList.add('sticky'); 
-        bankAccountForm.classList.add('hidden');
-        newBankAccountForm.classList.add('hidden');
-        walletAddressForm.classList.add('hidden');
-        newWalletAddressForm.classList.add('hidden');
+        // header.classList.add('sticky'); 
+        // bankAccountForm.classList.add('hidden');
+        newBankForm.classList.add('hidden');
+        // walletAddressForm.classList.add('hidden');
+        // newWalletAddressForm.classList.add('hidden');
     }
 
 })

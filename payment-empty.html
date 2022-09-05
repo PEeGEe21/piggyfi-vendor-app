@@ -59,7 +59,7 @@
                             Orders
                         </span>
                     </a>
-                    <a class=" menu-item w-full font-thin uppercase text-gray_cl  flex items-center p-3 px-4 my-3 transition-colors duration-200 justify-start hover:text-secondary" href="withdrawal.html">
+                    <a class=" menu-item w-full font-thin uppercase text-gray_cl  flex items-center p-3 px-4 my-3 transition-colors duration-200 justify-start hover:text-secondary" href="">
                         <span class="text-left px-3">
                             
                         
@@ -199,8 +199,8 @@
                                 Add liquidity
                                 
                             </button> -->
-                            <button class="flex items-center gap-4 text-sm mt-4 md:mt-0 px-5 py-2 rounded h-12  bg-secondary hover:bg-secondary/80 text-border_cl transition ease-in duration-200 text-center text-sm font-semibold shadow-md   rounded flex items-center justify-center  w-1/2 lg:w-3/6 xl:w-1/6">
-                                <span>
+                            <button class="flex items-center gap-4 text-sm mt-4 md:mt-0 px-5 py-2 rounded h-12  bg-secondary hover:bg-secondary/80 text-border_cl transition ease-in duration-200 text-center text-sm font-semibold shadow-md   rounded flex items-center justify-center  w-1/2 lg:w-3/6 xl:w-1/5" id="payoutDetBtn">
+                                <span class="pointer-events-none">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -208,7 +208,7 @@
                                         
                                 </span>
                                     
-                                Add liquidity
+                                Add payout details
                                 
                             </button>
                         </div>
@@ -234,7 +234,988 @@
                 </div>
 
             
+
+                 <!-- Overlay element -->
+            <div id="overlay" class="fixed hidden z-[1001] w-screen h-screen inset-0 bg-neutral800 bg-opacity-80"></div>
+
+
+                <!-- Choose where do you want to withdraw to? w-96 md:w-[40em] max-w-lg-->
+                <div id="step1_form" class="dialog hidden fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-full max-w-[500px]  bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg overflow-y-auto  h-auto   max-h-full scrollbar-change">
+                    <div class="">
+            
+                    <div class="flex items-start justify-between mb-5">
+
+                        <div class="grow">
+                            <h1 class="text-xl font-semibold">Add payout details</h1>
+                        </div>
+
+                        
+                        <button class="btn btn-sm btn-label-brand btn-bold flex items-start" id="close">
+                            <span class="pointer-events-none">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>             
+                            
+                        </button>
+
+                    </div>
+                        <div class="py-5 ">
+                            <form>
+                                <div class="mb-6">
+                                    <div class=" dropdown relative  grow large-dropdown mb-4 " data-large-dropdown >
+                                        <button class="w-full bg-white h-12 focus:outline-none active:outline-none  flex items-center justify-between border border-neutral100 focus:border-gray_cl active:border-gray_cl px-4 py-3 mt-2 rounded" id="" data-large-dropdown-btn type="button" >
+                                            <span class="pointer-events-none text-neutral600  flex items-center justify-start gap-3 ">
+                                                
+                                                <!-- <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.4946 3.36662L28.4946 8.16659C28.9613 8.35326 29.3346 8.91325 29.3346 9.40658V13.8333C29.3346 14.5666 28.7346 15.1666 28.0013 15.1666H4.0013C3.26797 15.1666 2.66797 14.5666 2.66797 13.8333V9.40658C2.66797 8.91325 3.04131 8.35326 3.50798 8.16659L15.508 3.36662C15.7746 3.25995 16.228 3.25995 16.4946 3.36662Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M29.3346 29.8333H2.66797V25.8333C2.66797 25.1 3.26797 24.5 4.0013 24.5H28.0013C28.7346 24.5 29.3346 25.1 29.3346 25.8333V29.8333Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M5.33203 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M10.668 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M16 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M21.332 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M26.668 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M1.33203 29.8335H30.6654" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M16 11.8335C17.1046 11.8335 18 10.9381 18 9.8335C18 8.72893 17.1046 7.8335 16 7.8335C14.8954 7.8335 14 8.72893 14 9.8335C14 10.9381 14.8954 11.8335 16 11.8335Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg> -->
+
+                                                <img src="images/bank.png"/>
+                                                Bank Account
+                                            
+                                            
+                                            </span>
+                                            <span class="pointer-events-none ">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-3 ml-2" role="img" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    
+                                                        <path d="M8.00099 11.7C7.53432 11.7 7.06766 11.5201 6.71432 11.1667L2.36766 6.82005C2.17432 6.62672 2.17432 6.30672 2.36766 6.11338C2.56099 5.92005 2.88099 5.92005 3.07432 6.11338L7.42099 10.4601C7.74099 10.7801 8.26099 10.7801 8.58099 10.4601L12.9277 6.11338C13.121 5.92005 13.441 5.92005 13.6343 6.11338C13.8277 6.30672 13.8277 6.62672 13.6343 6.82005L9.28766 11.1667C8.93432 11.5201 8.46766 11.7 8.00099 11.7Z" fill="currentColor"></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+
+                                        
+
+                                            <div class=" dropdown-menu large-dropdown px-3 py-3 shadow-box rounded-md w-full h-auto overflow-y-auto scrollbar-change ">
+                                                        
+                                                
+                                                <div class="py-2">
+                                                    <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                        <div class="flex items-center justify-start gap-2 pr-2">
+                                                            <span class="pointer-events-none text-neutral600   ">
+                                                
+                                                                <!-- <svg width="20" height="23" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M16.4946 3.36662L28.4946 8.16659C28.9613 8.35326 29.3346 8.91325 29.3346 9.40658V13.8333C29.3346 14.5666 28.7346 15.1666 28.0013 15.1666H4.0013C3.26797 15.1666 2.66797 14.5666 2.66797 13.8333V9.40658C2.66797 8.91325 3.04131 8.35326 3.50798 8.16659L15.508 3.36662C15.7746 3.25995 16.228 3.25995 16.4946 3.36662Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M29.3346 29.8333H2.66797V25.8333C2.66797 25.1 3.26797 24.5 4.0013 24.5H28.0013C28.7346 24.5 29.3346 25.1 29.3346 25.8333V29.8333Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M5.33203 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M10.668 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M16 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M21.332 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M26.668 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M1.33203 29.8335H30.6654" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M16 11.8335C17.1046 11.8335 18 10.9381 18 9.8335C18 8.72893 17.1046 7.8335 16 7.8335C14.8954 7.8335 14 8.72893 14 9.8335C14 10.9381 14.8954 11.8335 16 11.8335Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg> -->
+                                                            
+                                                                <img src="images/bank.png">
+                                                            
+                                                            </span>   
+                                                        </div>
+                                                        <div class="flex grow flex-col justify-start items-start text-left">
+                                                                <p class="text-neutral700 font-normal text-base">Bank Account</p>
+                                                        </div>
+                                                    </button>
+                                                    <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                        <div class="flex items-center justify-start gap-2 pr-2">
+                                                            <span class="pointer-events-none text-neutral600   ">
+                                                
+                                                                <img src="images/image 4.png">
+                                                            
+                                                            </span>   
+                                                        </div>
+                                                        <div class="flex grow flex-col justify-start items-start text-left">
+                                                                <p class="text-neutral700 font-normal text-base">Mobile Money</p>
+                                                        </div>
+                                                    </button>
+                                                    <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                        <div class="flex items-center justify-start gap-2 pr-2">
+                                                            <span class="pointer-events-none text-neutral600   ">
+                                                
+                                                                <img src="images/image 3.png">
+                                                            
+                                                            </span>   
+                                                        </div>
+                                                        <div class="flex grow flex-col justify-start items-start text-left">
+                                                                <p class="text-neutral700 font-normal text-base">Transferwise</p>
+                                                        </div>
+                                                    </button>
+                                                    
+                                                
+                                                </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                    
+                                </div>
+                                <div class="mb-6">
+                                    <div class="flex items-center justify-between">
+
+                                        <span class="text-neutral600 ">Choose bank account</span>
+
+                                        <button class="text-sm text-secondary flex items-center" id="addNewBankBtn" type="button">
+                                            <span class="mr-2">
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.5 3.33325V12.6666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3.83203 8H13.1654" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                            </span>
+                                            add new bank
+                                        </button>
+                                    </div>
+                                    <!-- <input id="company_name" type="text" placeholder="Enter your company’s name" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="company_name" autocomplete="off"> -->
+                                    <div class=" dropdown relative  grow large-dropdown mb-4 " data-large-dropdown >
+                                        <button class="w-full bg-white h-12 focus:outline-none active:outline-none  flex items-center justify-between border border-neutral100 focus:border-gray_cl active:border-gray_cl px-4 py-3 mt-2 rounded" id="" data-large-dropdown-btn type="button" >
+                                            <span class="pointer-events-none text-neutral600">Select or add new bank account</span>
+                                            <span class="pointer-events-none ">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-3 ml-2" role="img" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    
+                                                        <path d="M8.00099 11.7C7.53432 11.7 7.06766 11.5201 6.71432 11.1667L2.36766 6.82005C2.17432 6.62672 2.17432 6.30672 2.36766 6.11338C2.56099 5.92005 2.88099 5.92005 3.07432 6.11338L7.42099 10.4601C7.74099 10.7801 8.26099 10.7801 8.58099 10.4601L12.9277 6.11338C13.121 5.92005 13.441 5.92005 13.6343 6.11338C13.8277 6.30672 13.8277 6.62672 13.6343 6.82005L9.28766 11.1667C8.93432 11.5201 8.46766 11.7 8.00099 11.7Z" fill="currentColor"></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+
+                                        
+                                            <div class=" dropdown-menu large-dropdown px-3 py-3 shadow-box rounded-md w-full h-32 overflow-y-auto scrollbar-change ">
+                                                        
+                                                
+                                                <div class="">
+                                                    <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                        <div class="flex items-center justify-start gap-2 pr-2">
+                                                                <img src="images/Celo Dollar (CUSD).png">   
+                                                        </div>
+                                                        <div class="flex grow flex-col justify-start items-start text-left">
+                                                                <p class="text-neutral700 font-normal text-base">cUSD / NGN</p>
+                                                        </div>
+                                                    </button>
+                                                    <button class="flex items-start mb-3 py-2 px-1 hover:bg-gray-100 text-sm justify-between bg-white border-0 rounded-lg w-full coming_soon" type="button" disabled>
+                                                        <div class="flex items-center justify-start gap-2 pr-2">
+                                                            <img src="images/cEUR 1.png">
+                                                        </div>
+                                                        <div class="flex grow flex-row justify-between items-center text-left">
+                                                                <p class=" font-normal text-base">BUSD / NGN</p>
+                                                                <span class=" text-neutral600 font-thin text-sm">(Coming soon)</span>
+                                                        </div>
+                                                    </button>
+                                                    <button class="flex items-start mb-3 py-2 px-1 hover:bg-gray-100 text-sm justify-between bg-white border-0 rounded-lg w-full coming_soon" type="button" disabled>
+                                                        <div class="flex items-center justify-start gap-2 pr-2">
+                                                            <img src="images/cEUR 1.png">
+                                                        </div>
+                                                        <div class="flex grow flex-row justify-between items-center text-left">
+                                                                <p class=" font-normal text-base">USDT / NGN</p>
+                                                                <span class="text-neutral600 font-thin text-sm">(Coming soon)</span>
+                                                        </div>
+                                                    </button>
+                                                
+                                                </div>
+                                        </div>
+                                        <!-- </div> -->
+
+                                    
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="flex mx-auto w-full mt-12 md:w-5/6">
+                                    <button class="block bg-secondary w-full h-[50px] text-white bg-secondary transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded flex items-center justify-center" type="button">Add bank details</button>
+                                </div>
+                            </form>
+                        </div>
+                    
+                    </div>
+                </div>
+                <!-- End of Choose where do you want to withdraw to? -->
+
+        
+
+                    <!-- w-full md:w-[40em] max-w-lg md:max-w-xl -->
+
+                    <!-- Bank --- List new ads -->
+                    <div id="" class="dialog hidden fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full md:max-w-[500px] lg:max-w-xl bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg overflow-y-auto  h-auto  max-h-full scrollbar-change">
+                        <div class="my-4">
+
+                            <div class="modal-header flex items-center justify-between pb-5">
+                                
+                                <span class=" text-primary text-xl">List new ads</span>
+
+                                <button id="close" class="p-2">
+                                    <span class="pointer-events-none">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                    
+                                </button>
+                                
+                            </div>
+                            <div class="mt-4">
+                                <form>
+                                    <div class="mb-6">
+                                        <div class="flex justify-between items-center">                                
+                                            <label class="text-gray-700 font-medium" for="company_name">Select currency</label>
+                                            
+                                        </div>
+                                        <!-- <input id="company_name" type="text" placeholder="Enter your company’s name" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="company_name" autocomplete="off"> -->
+                                        <div class=" dropdown relative  grow large-dropdown mb-4 " data-large-dropdown >
+                                            <button class="w-full bg-white h-12 focus:outline-none active:outline-none  flex items-center justify-between border border-neutral100 focus:border-gray_cl active:border-gray_cl px-4 py-3 mt-2 rounded" id="" data-large-dropdown-btn type="button" >
+                                                <span class="pointer-events-none text-neutral600">Select currency to list as ads</span>
+                                                <span class="pointer-events-none ">
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-3 ml-2" role="img" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        
+                                                            <path d="M8.00099 11.7C7.53432 11.7 7.06766 11.5201 6.71432 11.1667L2.36766 6.82005C2.17432 6.62672 2.17432 6.30672 2.36766 6.11338C2.56099 5.92005 2.88099 5.92005 3.07432 6.11338L7.42099 10.4601C7.74099 10.7801 8.26099 10.7801 8.58099 10.4601L12.9277 6.11338C13.121 5.92005 13.441 5.92005 13.6343 6.11338C13.8277 6.30672 13.8277 6.62672 13.6343 6.82005L9.28766 11.1667C8.93432 11.5201 8.46766 11.7 8.00099 11.7Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+
+                                            
+
+                                            <!-- <div class="mt-5 md:mt-0 w-full md:w-1/3 grow"> -->
+                                                <div class=" dropdown-menu large-dropdown px-3 py-3 shadow-box rounded-md w-full h-40 overflow-y-auto scrollbar-change ">
+                                                            
+                                                    
+                                                    <div class="">
+                                                        <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                            <div class="flex items-center justify-start gap-2 pr-2">
+                                                                    <img src="images/Celo Dollar (CUSD).png">   
+                                                            </div>
+                                                            <div class="flex grow flex-col justify-start items-start text-left">
+                                                                    <p class="text-neutral700 font-normal text-base">cUSD / NGN</p>
+                                                            </div>
+                                                        </button>
+                                                        <button class="flex items-start mb-3 py-2 px-1 hover:bg-gray-100 text-sm justify-between bg-white border-0 rounded-lg w-full coming_soon" type="button" disabled>
+                                                            <div class="flex items-center justify-start gap-2 pr-2">
+                                                                <img src="images/cEUR 1.png">
+                                                            </div>
+                                                            <div class="flex grow flex-row justify-between items-center text-left">
+                                                                    <p class=" font-normal text-base">BUSD / NGN</p>
+                                                                    <span class=" text-neutral600 font-thin text-sm">(Coming soon)</span>
+                                                            </div>
+                                                        </button>
+                                                        <button class="flex items-start mb-3 py-2 px-1 hover:bg-gray-100 text-sm justify-between bg-white border-0 rounded-lg w-full coming_soon" type="button" disabled>
+                                                            <div class="flex items-center justify-start gap-2 pr-2">
+                                                                <img src="images/cEUR 1.png">
+                                                            </div>
+                                                            <div class="flex grow flex-row justify-between items-center text-left">
+                                                                    <p class=" font-normal text-base">USDT / NGN</p>
+                                                                    <span class="text-neutral600 font-thin text-sm">(Coming soon)</span>
+                                                            </div>
+                                                        </button>
+                                                    
+                                                    </div>
+                                            </div>
+                                            <!-- </div> -->
+
+                                        
+                                        </div>
+
+                                        
+                                        
+                                    </div>
+                                    <div class="mb-6">
+                                        <div class="flex justify-between items-center">                                
+                                            <label class="text-gray-700 font-medium" for="company_name">Type of ads</label>
+                                            
+                                        </div>
+                                        <!-- <input id="company_name" type="text" placeholder="Enter your company’s name" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="company_name" autocomplete="off"> -->
+                                        <div class=" dropdown relative  grow large-dropdown mb-4 " data-large-dropdown >
+                                            <button class="w-full bg-white h-12 focus:outline-none active:outline-none  flex items-center justify-between border border-neutral100 focus:border-gray_cl active:border-gray_cl px-4 py-3 mt-2 rounded" id="" data-large-dropdown-btn type="button" >
+                                                <span class="pointer-events-none text-neutral600">Select ads</span>
+                                                <span class="pointer-events-none ">
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-3 ml-2" role="img" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        
+                                                            <path d="M8.00099 11.7C7.53432 11.7 7.06766 11.5201 6.71432 11.1667L2.36766 6.82005C2.17432 6.62672 2.17432 6.30672 2.36766 6.11338C2.56099 5.92005 2.88099 5.92005 3.07432 6.11338L7.42099 10.4601C7.74099 10.7801 8.26099 10.7801 8.58099 10.4601L12.9277 6.11338C13.121 5.92005 13.441 5.92005 13.6343 6.11338C13.8277 6.30672 13.8277 6.62672 13.6343 6.82005L9.28766 11.1667C8.93432 11.5201 8.46766 11.7 8.00099 11.7Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+
+                                            
+
+                                            <!-- <div class="mt-5 md:mt-0 w-full md:w-1/3 grow"> -->
+                                                <div class=" dropdown-menu large-dropdown px-3 py-3 shadow-box rounded-md w-full h-auto overflow-y-auto scrollbar-change ">
+                                                    <div class="">
+                                                        <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                            <div class="flex items-center justify-start gap-2 pr-2">
+                                                                <span>
+
+                                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M2.91927 18.9583H17.0859C17.4276 18.9583 17.7109 18.6749 17.7109 18.3333C17.7109 17.9916 17.4276 17.7083 17.0859 17.7083H2.91927C2.5776 17.7083 2.29427 17.9916 2.29427 18.3333C2.29427 18.6749 2.5776 18.9583 2.91927 18.9583Z" fill="#4A4957"/>
+                                                                        <path d="M4.16354 15.2083C4.32188 15.2083 4.48021 15.15 4.60521 15.025L16.2719 3.35828C16.5135 3.11662 16.5135 2.71662 16.2719 2.47495C16.0302 2.23328 15.6302 2.23328 15.3885 2.47495L3.72188 14.1416C3.48021 14.3833 3.48021 14.7833 3.72188 15.025C3.84688 15.15 4.00521 15.2083 4.16354 15.2083Z" fill="#4A4957"/>
+                                                                        <path d="M15.8359 12.1001C16.1776 12.1001 16.4609 11.8167 16.4609 11.4751V2.91675C16.4609 2.57508 16.1776 2.29175 15.8359 2.29175H7.2776C6.93594 2.29175 6.6526 2.57508 6.6526 2.91675C6.6526 3.25841 6.93594 3.54175 7.2776 3.54175H15.2109V11.4751C15.2109 11.8167 15.4943 12.1001 15.8359 12.1001Z" fill="#4A4957"/>
+                                                                    </svg>
+                                                                </span>
+                                                            </div>
+                                                            <div class="flex grow flex-col justify-start items-start text-left">
+                                                                    <p class="text-neutral700 font-normal text-base">Buy</p>
+                                                            </div>
+                                                        </button>
+                                                        <button class="flex items-start mb-3 py-2 px-1 hover:bg-gray-100 text-sm justify-between bg-white border-0 rounded-lg w-full " type="button">
+                                                            <div class="flex items-center justify-start gap-2 pr-2">
+                                                                <span>
+
+                                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M4.16979 15.2083C4.01146 15.2083 3.85313 15.15 3.72812 15.025C3.48646 14.7833 3.48646 14.3833 3.72812 14.1416L15.3948 2.47495C15.6365 2.23328 16.0365 2.23328 16.2781 2.47495C16.5198 2.71662 16.5198 3.11662 16.2781 3.35828L4.61146 15.025C4.48646 15.15 4.32813 15.2083 4.16979 15.2083Z" fill="#4A4957"/>
+                                                                        <path d="M12.7224 15.2082H4.16406C3.8224 15.2082 3.53906 14.9249 3.53906 14.5832V6.0249C3.53906 5.68324 3.8224 5.3999 4.16406 5.3999C4.50573 5.3999 4.78906 5.68324 4.78906 6.0249V13.9582H12.7224C13.0641 13.9582 13.3474 14.2416 13.3474 14.5832C13.3474 14.9249 13.0641 15.2082 12.7224 15.2082Z" fill="#4A4957"/>
+                                                                        <path d="M17.0807 18.9583H2.91406C2.5724 18.9583 2.28906 18.6749 2.28906 18.3333C2.28906 17.9916 2.5724 17.7083 2.91406 17.7083H17.0807C17.4224 17.7083 17.7057 17.9916 17.7057 18.3333C17.7057 18.6749 17.4224 18.9583 17.0807 18.9583Z" fill="#4A4957"/>
+                                                                    </svg>
+                                                                </span>
+                                                            </div>
+                                                            <div class="flex grow flex-col justify-start items-start text-left">
+                                                                    <p class="text-neutral700 font-normal text-base">Sell</p>
+                                                            </div>
+                                                        </button>
+                                                    
+                                                    </div>
+                                            </div>
+                                            <!-- </div> -->
+
+                                        
+                                        </div>
+
+                                        
+                                        
+                                    </div>
+
+                                    <div class="mb-6 w-full">
+                                                <label class="text-gray-700 font-medium mb-3 " for="fname">Exchange rate e.g 638 NGN / $1</label>
+                                                <input id="fname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded focus:outline-none" name="fname" autocomplete="off" placeholder="What would be your exchange rate?">
+                                        </div>
+                                    <div class="mb-6 w-full">
+                                                <label class="text-gray-700 font-medium mb-3 " for="fname">Payout method</label>
+                                                <input id="fname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded focus:outline-none" name="fname" autocomplete="off" placeholder="How do you want to collect money for this ad?">
+                                        </div>
+                                    <div class="mb-6 w-full">
+                                                <label class="text-gray-700 font-medium mb-3 " for="fname">Total Liquidity amount</label>
+                                                <input id="fname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded focus:outline-none" name="fname" autocomplete="off" placeholder="How much liquidity do you want to provide?">
+                                                <span class="text-sm flex items-center justify-end my-3 text-neutral700 font-normal">Balance ~ $100,000.62</span>
+                                        </div>
+                                        
+                                    <div class="flex items-center justify-between flex-col md:flex-row gap-2 w-full">
+                        
+                                        <div class="mb-6 w-full md:w-1/2">
+                                                <label class="text-gray-700 font-medium mb-3 " for="fname">Minimum limit</label>
+                                                <input id="fname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 transition duration-150 ease-in-out focus:border-gray-300 rounded focus:outline-none" name="fname" autocomplete="off" placeholder="What is your min. limit?">
+                                        </div>
+                                        
+                    
+                                        <div class="mb-6 w-full md:w-1/2">
+                                                <label class="text-gray-700 font-medium mb-3" for="lname">Maximum limit</label>
+                                                <input id="lname" type="text" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 focus:border-gray-300 rounded focus:outline-none transition duration-150 ease-in-out" name="lname" autocomplete="off" placeholder="What is your max. limit?">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="mb-6">
+                                        <label class="text-gray-700 font-medium mb-3" for="amount">Additional instructions</label>
+                                        <textarea class="w-full border border-neutral100 focus:outline-none active:outline-none p-3 textarea" placeholder="Such as bank not accepted e.t.c. Sensor words such as phone number and personal information " rows="5"></textarea>
+                                        
+                                    </div>
+                        
+                                <div class="flex mx-auto w-full md:w-5/6">
+                                    <button class="block bg-secondary w-full h-[50px] text-white bg-secondary transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded flex items-center justify-center" type="button" onclick=onWithdraw()>List ads</button>
+                                </div>
+                                    
+                                </form>
+
+                            </div>
+                        </div>
+                    </div> 
+
+
+
+
+            <!-- Add a new Bank -->
+            <div class="dialog hidden fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg md:max-w-xl bg-white rounded-md newBankAccountForm px-8 py-6 space-y-5 drop-shadow-lg overflow-y-auto  h-auto   max-h-full" id="newBankForm">
+                <div class="">
+
+                    <div class="modal-header flex items-center justify-between pb-5">
+                        
+                        <span class=" text-primary text-xl">Add new bank</span>
+
+                        <button id="close" class="p-2">
+                            <span class="pointer-events-none">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            
+                        </button>
+                        
+                    </div>
+                    <div class="mt-4">
+                        <form>
+                            <div class="mb-6">
+                                <label class="text-gray-700 font-medium mb-3" for="bank_name">Bank Name</label>
+                                <input id="bank_name" type="text" placeholder="What is the name of the bank?" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="bank_name" autocomplete="off">
+                                
+                            </div>
+                            <div class="mb-6">
+                                <label class="text-gray-700 font-medium mb-3" for="account_name">Account Name</label>
+                                <input id="account_name" type="text" placeholder="Enter the name on account" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="account_name" autocomplete="off">
+                                
+                            </div>
+                            <div class="mb-6">
+                                <label class="text-gray-700 font-medium mb-3" for="account_number">Account Number</label>
+                                <input id="account_number" type="text" placeholder="Enter the account number" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="account_number" autocomplete="off">
+                                
+                            </div>
+
+                           <div class="flex mx-auto w-full md:w-5/6">
+                               <button class="block bg-secondary w-full h-[50px] text-white bg-secondary transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded flex items-center justify-center" type="submit" >Add bank</button>
+                           </div>
+
+                        <div class="mt-10 mb-4 banner">
+                            <div class="flex items-start py-4 px-3 mb-2  text-sm justify-between bg-[#F1F0FB] border border-[#D0D5DD]  rounded-lg w-full text-[#667085]">
+                            <div class="flex items-center justify-start gap-2 pr-2">
+                                <span>
+
+                                    
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.0013 13.3332V9.99984M10.0013 6.6665H10.0096M18.3346 9.99984C18.3346 14.6022 14.6037 18.3332 10.0013 18.3332C5.39893 18.3332 1.66797 14.6022 1.66797 9.99984C1.66797 5.39746 5.39893 1.6665 10.0013 1.6665C14.6037 1.6665 18.3346 5.39746 18.3346 9.99984Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </span>
+                                
+                                
+                            </div>
+                            <div class="flex grow flex-col">
+                                    <p class=" font-normal text-sm mb-1 ">Confirm that all of the above information are correct as this would be shown to the customers. PiggyFi would not be responsible for loss due to wrong information</p>
+                            </div>
+                            <button class="btn btn-sm btn-label-brand btn-bold flex items-start" id="hideBanner" type="button">
+                                
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </button>
+                        </div>
+                    </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div> 
+            <!-- End of Add a new Bank -->
+
+
+
+            <!-- Add payout details for Mobile Money -->
+            <div class="dialog hidden  fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg md:max-w-xl bg-white rounded-md newBankAccountForm px-8 py-6 space-y-5 drop-shadow-lg overflow-y-auto  h-auto   max-h-full" id="">
+                <div class="">
+
+                    <div class="modal-header flex items-center justify-between pb-5">
+                        
+                        <span class=" text-primary text-xl">Add payout details</span>
+
+                        <button id="close" class="p-2">
+                            <span class="pointer-events-none">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            
+                        </button>
+                        
+                    </div>
+                    <div class="mt-4">
+                        <form>
+                            <div class="mb-6">
+                                <div class=" dropdown relative  grow large-dropdown mb-4 " data-large-dropdown >
+                                    <button class="w-full bg-white h-12 focus:outline-none active:outline-none  flex items-center justify-between border border-neutral100 focus:border-gray_cl active:border-gray_cl px-4 py-3 mt-2 rounded" id="" data-large-dropdown-btn type="button" >
+                                        <span class="pointer-events-none text-neutral600  flex items-center justify-start gap-3 ">
+                                            
+                                            <img src="images/image 4.png">
+
+
+                                            Mobile Money
+                                        
+                                        
+                                        </span>
+                                        <span class="pointer-events-none ">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-3 ml-2" role="img" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                
+                                                    <path d="M8.00099 11.7C7.53432 11.7 7.06766 11.5201 6.71432 11.1667L2.36766 6.82005C2.17432 6.62672 2.17432 6.30672 2.36766 6.11338C2.56099 5.92005 2.88099 5.92005 3.07432 6.11338L7.42099 10.4601C7.74099 10.7801 8.26099 10.7801 8.58099 10.4601L12.9277 6.11338C13.121 5.92005 13.441 5.92005 13.6343 6.11338C13.8277 6.30672 13.8277 6.62672 13.6343 6.82005L9.28766 11.1667C8.93432 11.5201 8.46766 11.7 8.00099 11.7Z" fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+
+                                    
+
+                                        <div class=" dropdown-menu large-dropdown px-3 py-3 shadow-box rounded-md w-full h-auto overflow-y-auto scrollbar-change ">
+                                                    
+                                            
+                                            <div class="py-2">
+                                                <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                    <div class="flex items-center justify-start gap-2 pr-2">
+                                                        <span class="pointer-events-none text-neutral600   ">
+                                            
+                                                            <!-- <svg width="20" height="23" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.4946 3.36662L28.4946 8.16659C28.9613 8.35326 29.3346 8.91325 29.3346 9.40658V13.8333C29.3346 14.5666 28.7346 15.1666 28.0013 15.1666H4.0013C3.26797 15.1666 2.66797 14.5666 2.66797 13.8333V9.40658C2.66797 8.91325 3.04131 8.35326 3.50798 8.16659L15.508 3.36662C15.7746 3.25995 16.228 3.25995 16.4946 3.36662Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M29.3346 29.8333H2.66797V25.8333C2.66797 25.1 3.26797 24.5 4.0013 24.5H28.0013C28.7346 24.5 29.3346 25.1 29.3346 25.8333V29.8333Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M5.33203 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M10.668 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M16 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M21.332 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M26.668 24.4998V15.1665" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M1.33203 29.8335H30.6654" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M16 11.8335C17.1046 11.8335 18 10.9381 18 9.8335C18 8.72893 17.1046 7.8335 16 7.8335C14.8954 7.8335 14 8.72893 14 9.8335C14 10.9381 14.8954 11.8335 16 11.8335Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg> -->
+                                                        
+                                                            <img src="images/bank.png">
+                                                        
+                                                        </span>   
+                                                    </div>
+                                                    <div class="flex grow flex-col justify-start items-start text-left">
+                                                            <p class="text-neutral700 font-normal text-base">Bank Account</p>
+                                                    </div>
+                                                </button>
+                                                <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                    <div class="flex items-center justify-start gap-2 pr-2">
+                                                        <span class="pointer-events-none text-neutral600   ">
+                                            
+                                                            <img src="images/image 4.png">
+                                                        
+                                                        </span>   
+                                                    </div>
+                                                    <div class="flex grow flex-col justify-start items-start text-left">
+                                                            <p class="text-neutral700 font-normal text-base">Mobile Money</p>
+                                                    </div>
+                                                </button>
+                                                <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                    <div class="flex items-center justify-start gap-2 pr-2">
+                                                        <span class="pointer-events-none text-neutral600   ">
+                                            
+                                                            <img src="images/image 3.png">
+                                                        
+                                                        </span>   
+                                                    </div>
+                                                    <div class="flex grow flex-col justify-start items-start text-left">
+                                                            <p class="text-neutral700 font-normal text-base">Transferwise</p>
+                                                    </div>
+                                                </button>
+                                                
+                                            
+                                            </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                            </div>
+
+                            <div class="mb-6">
+                                <div class="flex justify-between items-center">                                
+                                    <label class="text-gray-700 font-medium" for="mobile_money_provider">Mobile money provider</label>
+                                    
+                                </div>
+                                <div class=" dropdown relative  grow large-dropdown mb-4 " data-large-dropdown id="mobile_money_provider">
+                                    <button class="w-full bg-white h-12 focus:outline-none active:outline-none  flex items-center justify-between border border-neutral100 focus:border-gray_cl active:border-gray_cl px-4 py-3 mt-2 rounded" id="" data-large-dropdown-btn type="button" >
+                                        <span class="pointer-events-none text-neutral600">Select your money provider</span>
+                                        <span class="pointer-events-none ">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-3 ml-2" role="img" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                
+                                                    <path d="M8.00099 11.7C7.53432 11.7 7.06766 11.5201 6.71432 11.1667L2.36766 6.82005C2.17432 6.62672 2.17432 6.30672 2.36766 6.11338C2.56099 5.92005 2.88099 5.92005 3.07432 6.11338L7.42099 10.4601C7.74099 10.7801 8.26099 10.7801 8.58099 10.4601L12.9277 6.11338C13.121 5.92005 13.441 5.92005 13.6343 6.11338C13.8277 6.30672 13.8277 6.62672 13.6343 6.82005L9.28766 11.1667C8.93432 11.5201 8.46766 11.7 8.00099 11.7Z" fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+
+                                    
+
+                                    <div class=" dropdown-menu large-dropdown px-3 py-3 shadow-box rounded-md w-full h-52 overflow-y-auto scrollbar-change ">
+                                                        
+                                        <div class="relative rounded-full  items-center flex w-full h-12 my-2 ">
+                                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none h-full">
+                                                <span class="text-gray-500 px-3">
+                                                    <svg width="22" height="22" viewBox="0 0 20 20" class="mr-3 pr-2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#9998A9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M17.5 17.5L13.875 13.875" stroke="#9998A9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                </span>
+                                            </div>
+                                            <input type="text" name="" id="" class="border border-gray-300 py-2 px-4  block w-full pl-12 pr-12 sm:text-sm rounded-full h-full focus:outline-none focus:border-gray-400" placeholder="search bank name, number" autocomplete="off"/>
+                                            
+                                        </div>
+                                        <div class="mt-2 py-3">
+                                            <button class="flex items-center mb-3 py-3 px-2 text-sm justify-between bg-white border-0 border-border_cl rounded-lg w-full hover:bg-gray-100 " type="button">
+                                                <div class="flex justify-between gap-4">
+                                                    <div class="flex flex-col items-start justify-start gap-2">
+                                                        <span class="text-neutral700">MPESA</span>
+                                                        <!-- <span class="text-xs text-neutral600">First Bank</span> -->
+                                                    </div>
+                                                    <!-- <span class="text-neutral800">0176593860</span> -->
+                                                </div>
+                                                
+                                                <div class="flex flex-row justify-center items-center text-left gap-3">
+                                                        <!-- <span>
+                                                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.3346 1L5.0013 8.33333L1.66797 5" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </span> -->
+                                                        <div class="dropdown relative" data-dropdown>
+                                                            <span class="btn btn-sm btn-label-brand btn-bold flex items-center mx-auto dropdown-toggle cursor-pointer hover:bg-gray-200 rounded-full p-2" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-dropdown-btn >
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="pointer-events-none	">
+                                                                    <path d="M7.66667 4.33333C8.03486 4.33333 8.33333 4.03486 8.33333 3.66667C8.33333 3.29848 8.03486 3 7.66667 3C7.29848 3 7 3.29848 7 3.66667C7 4.03486 7.29848 4.33333 7.66667 4.33333Z" fill="#4A4957" stroke="#4A4957" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M7.66667 8.66683C8.03486 8.66683 8.33333 8.36835 8.33333 8.00016C8.33333 7.63197 8.03486 7.3335 7.66667 7.3335C7.29848 7.3335 7 7.63197 7 8.00016C7 8.36835 7.29848 8.66683 7.66667 8.66683Z" fill="#4A4957" stroke="#4A4957" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M7.66667 12.9998C8.03486 12.9998 8.33333 12.7014 8.33333 12.3332C8.33333 11.965 8.03486 11.6665 7.66667 11.6665C7.29848 11.6665 7 11.965 7 12.3332C7 12.7014 7.29848 12.9998 7.66667 12.9998Z" fill="#4A4957" stroke="#4A4957" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                                
+                                                            </span>
+
+                                                                <div class="dropdown-menu dropdown-menu-right border-0 py-3 z-50 min-w-0 bg-neutral50" aria-labelledby="dropdownMenuButton" >
+                                                                    <a class="dropdown-item flex items-center text-xs gap-2 py-2 text-neutral800 " href="#">
+                                                                        <span>
+                                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M10.5 2.99023C8.835 2.82523 7.16 2.74023 5.49 2.74023C4.5 2.74023 3.51 2.79023 2.52 2.89023L1.5 2.99023" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <path d="M4.25 2.485L4.36 1.83C4.44 1.355 4.5 1 5.345 1H6.655C7.5 1 7.565 1.375 7.64 1.835L7.75 2.485" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <path d="M9.42422 4.56982L9.09922 9.60482C9.04422 10.3898 8.99922 10.9998 7.60422 10.9998H4.39422C2.99922 10.9998 2.95422 10.3898 2.89922 9.60482L2.57422 4.56982" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <path d="M5.16406 8.25H6.82906" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <path d="M4.75 6.25H7.25" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            </svg>
+                                                                        </span> Delete
+                                                                    </a>
+                                                                    <a class="dropdown-item flex items-center text-xs gap-2 text-neutral800  py-2" href="#">
+                                                                        <span>
+                                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M6.63164 1.80011L2.52663 6.14511C2.37163 6.31011 2.22163 6.63511 2.19163 6.86011L2.00663 8.48011C1.94163 9.06511 2.36163 9.46511 2.94163 9.36511L4.55164 9.09011C4.77664 9.05011 5.09163 8.88511 5.24663 8.71511L9.35164 4.37011C10.0616 3.62011 10.3816 2.76511 9.27664 1.72011C8.17663 0.685108 7.34164 1.05011 6.63164 1.80011Z" stroke="#25252C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <path d="M5.94531 2.5249C6.16031 3.9049 7.28031 4.9599 8.67031 5.0999" stroke="#25252C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <path d="M1.5 11H10.5" stroke="#25252C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                </svg>
+                                                                        </span> Edit
+                                                                    </a>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                </div>
+                                            </button>
+
+                                            <button class="flex items-center mb-3 py-3 px-2 text-sm justify-between bg-white border border-[#C7C6D0] text-secondary rounded-lg w-full hover:bg-gray-100 " type="button">
+                                                <div class="flex justify-between gap-4">
+                                                    <div class="flex flex-col items-start justify-start gap-2">
+                                                        <span class="">MTN Mobile money</span>
+                                                        <!-- <span class="text-xs text-neutral600">Guaranty Trust Bank</span> -->
+                                                    </div>
+                                                    <!-- <span class="text-neutral800">0176593860</span> -->
+                                                </div>
+                                                
+                                                <div class="flex flex-row justify-center items-center text-left gap-3">
+                                                        <span class="">
+                                                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.3346 1L5.0013 8.33333L1.66797 5" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </span>
+                                                        <div class="dropdown relative" data-dropdown>
+                                                            <span class="btn btn-sm btn-label-brand btn-bold flex items-center mx-auto dropdown-toggle cursor-pointer hover:bg-gray-200 rounded-full p-2" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-dropdown-btn >
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="pointer-events-none	">
+                                                                    <path d="M7.66667 4.33333C8.03486 4.33333 8.33333 4.03486 8.33333 3.66667C8.33333 3.29848 8.03486 3 7.66667 3C7.29848 3 7 3.29848 7 3.66667C7 4.03486 7.29848 4.33333 7.66667 4.33333Z" fill="#4A4957" stroke="#4A4957" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M7.66667 8.66683C8.03486 8.66683 8.33333 8.36835 8.33333 8.00016C8.33333 7.63197 8.03486 7.3335 7.66667 7.3335C7.29848 7.3335 7 7.63197 7 8.00016C7 8.36835 7.29848 8.66683 7.66667 8.66683Z" fill="#4A4957" stroke="#4A4957" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M7.66667 12.9998C8.03486 12.9998 8.33333 12.7014 8.33333 12.3332C8.33333 11.965 8.03486 11.6665 7.66667 11.6665C7.29848 11.6665 7 11.965 7 12.3332C7 12.7014 7.29848 12.9998 7.66667 12.9998Z" fill="#4A4957" stroke="#4A4957" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                                
+                                                            </span>
+
+                                                                <div class="dropdown-menu dropdown-menu-right border-0 py-3 z-50 min-w-0 bg-neutral50" aria-labelledby="dropdownMenuButton" >
+                                                                    <a class="dropdown-item flex items-center text-neutral800 text-xs gap-2 py-2 " href="#">
+                                                                        <span>
+                                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M10.5 2.99023C8.835 2.82523 7.16 2.74023 5.49 2.74023C4.5 2.74023 3.51 2.79023 2.52 2.89023L1.5 2.99023" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <path d="M4.25 2.485L4.36 1.83C4.44 1.355 4.5 1 5.345 1H6.655C7.5 1 7.565 1.375 7.64 1.835L7.75 2.485" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <path d="M9.42422 4.56982L9.09922 9.60482C9.04422 10.3898 8.99922 10.9998 7.60422 10.9998H4.39422C2.99922 10.9998 2.95422 10.3898 2.89922 9.60482L2.57422 4.56982" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <path d="M5.16406 8.25H6.82906" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <path d="M4.75 6.25H7.25" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            </svg>
+                                                                        </span> Delete
+                                                                    </a>
+                                                                    <a class="dropdown-item flex items-center text-xs gap-2 text-neutral800 py-2" href="#">
+                                                                        <span>
+                                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M6.63164 1.80011L2.52663 6.14511C2.37163 6.31011 2.22163 6.63511 2.19163 6.86011L2.00663 8.48011C1.94163 9.06511 2.36163 9.46511 2.94163 9.36511L4.55164 9.09011C4.77664 9.05011 5.09163 8.88511 5.24663 8.71511L9.35164 4.37011C10.0616 3.62011 10.3816 2.76511 9.27664 1.72011C8.17663 0.685108 7.34164 1.05011 6.63164 1.80011Z" stroke="#25252C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <path d="M5.94531 2.5249C6.16031 3.9049 7.28031 4.9599 8.67031 5.0999" stroke="#25252C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <path d="M1.5 11H10.5" stroke="#25252C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                </svg>
+                                                                        </span> Edit
+                                                                    </a>
+                                                                    
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                            </button>
+
+                                            <button class="flex items-center mb-3 py-2 px-2 text-sm justify-between bg-white border-0 border-border_cl rounded-lg w-full hover:bg-gray-100 " type="button">
+                                                <div class="flex justify-between gap-4">
+                                                    <div class="flex flex-col items-start justify-start gap-2">
+                                                        <span class="text-neutral700">Airtel Mobile Money</span>
+                                                        <!-- <span class="text-xs text-neutral600">United Bank of Africa</span> -->
+                                                    </div>
+                                                    <!-- <span class="text-neutral800">0176593860</span> -->
+                                                </div>
+                                                
+                                                <div class="flex flex-row justify-center items-center text-left gap-3">
+                                                        <!-- <span>
+                                                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.3346 1L5.0013 8.33333L1.66797 5" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </span> -->
+                                                        <div class="dropdown relative" data-dropdown>
+                                                            <span class="btn btn-sm btn-label-brand btn-bold flex items-center mx-auto dropdown-toggle cursor-pointer hover:bg-gray-200 rounded-full p-2" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-dropdown-btn >
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="pointer-events-none	">
+                                                                    <path d="M7.66667 4.33333C8.03486 4.33333 8.33333 4.03486 8.33333 3.66667C8.33333 3.29848 8.03486 3 7.66667 3C7.29848 3 7 3.29848 7 3.66667C7 4.03486 7.29848 4.33333 7.66667 4.33333Z" fill="#4A4957" stroke="#4A4957" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M7.66667 8.66683C8.03486 8.66683 8.33333 8.36835 8.33333 8.00016C8.33333 7.63197 8.03486 7.3335 7.66667 7.3335C7.29848 7.3335 7 7.63197 7 8.00016C7 8.36835 7.29848 8.66683 7.66667 8.66683Z" fill="#4A4957" stroke="#4A4957" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M7.66667 12.9998C8.03486 12.9998 8.33333 12.7014 8.33333 12.3332C8.33333 11.965 8.03486 11.6665 7.66667 11.6665C7.29848 11.6665 7 11.965 7 12.3332C7 12.7014 7.29848 12.9998 7.66667 12.9998Z" fill="#4A4957" stroke="#4A4957" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                                
+                                                            </span>
+
+                                                            <div class="dropdown-menu dropdown-menu-right border-0 py-3 z-50 min-w-0 bg-neutral50" aria-labelledby="dropdownMenuButton" >
+                                                                <a class="dropdown-item flex items-center text-xs gap-2 py-2 text-neutral800 " href="#">
+                                                                    <span>
+                                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M10.5 2.99023C8.835 2.82523 7.16 2.74023 5.49 2.74023C4.5 2.74023 3.51 2.79023 2.52 2.89023L1.5 2.99023" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M4.25 2.485L4.36 1.83C4.44 1.355 4.5 1 5.345 1H6.655C7.5 1 7.565 1.375 7.64 1.835L7.75 2.485" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M9.42422 4.56982L9.09922 9.60482C9.04422 10.3898 8.99922 10.9998 7.60422 10.9998H4.39422C2.99922 10.9998 2.95422 10.3898 2.89922 9.60482L2.57422 4.56982" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M5.16406 8.25H6.82906" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M4.75 6.25H7.25" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                        </svg>
+                                                                    </span> Delete
+                                                                </a>
+                                                                <a class="dropdown-item flex items-center text-xs gap-2 text-neutral800 py-2" href="#">
+                                                                    <span>
+                                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M6.63164 1.80011L2.52663 6.14511C2.37163 6.31011 2.22163 6.63511 2.19163 6.86011L2.00663 8.48011C1.94163 9.06511 2.36163 9.46511 2.94163 9.36511L4.55164 9.09011C4.77664 9.05011 5.09163 8.88511 5.24663 8.71511L9.35164 4.37011C10.0616 3.62011 10.3816 2.76511 9.27664 1.72011C8.17663 0.685108 7.34164 1.05011 6.63164 1.80011Z" stroke="#25252C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M5.94531 2.5249C6.16031 3.9049 7.28031 4.9599 8.67031 5.0999" stroke="#25252C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M1.5 11H10.5" stroke="#25252C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            </svg>
+                                                                    </span> Edit
+                                                                </a>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </button>
+                                            <button class="flex items-center mb-3 py-2 px-2 text-sm justify-between bg-white border-0 border-border_cl rounded-lg w-full hover:bg-gray-100 " type="button">
+                                                <div class="flex justify-between gap-4">
+                                                    <div class="flex flex-col items-start justify-start gap-2">
+                                                        <span class="text-neutral700">Vodafone Cash</span>
+                                                        <!-- <span class="text-xs text-neutral600">United Bank of Africa</span> -->
+                                                    </div>
+                                                    <!-- <span class="text-neutral800">0176593860</span> -->
+                                                </div>
+                                                
+                                                <div class="flex flex-row justify-center items-center text-left gap-3">
+                                                        <!-- <span>
+                                                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.3346 1L5.0013 8.33333L1.66797 5" stroke="#6E65D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </span> -->
+                                                        <div class="dropdown relative" data-dropdown>
+                                                            <span class="btn btn-sm btn-label-brand btn-bold flex items-center mx-auto dropdown-toggle cursor-pointer hover:bg-gray-200 rounded-full p-2" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-dropdown-btn >
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="pointer-events-none	">
+                                                                    <path d="M7.66667 4.33333C8.03486 4.33333 8.33333 4.03486 8.33333 3.66667C8.33333 3.29848 8.03486 3 7.66667 3C7.29848 3 7 3.29848 7 3.66667C7 4.03486 7.29848 4.33333 7.66667 4.33333Z" fill="#4A4957" stroke="#4A4957" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M7.66667 8.66683C8.03486 8.66683 8.33333 8.36835 8.33333 8.00016C8.33333 7.63197 8.03486 7.3335 7.66667 7.3335C7.29848 7.3335 7 7.63197 7 8.00016C7 8.36835 7.29848 8.66683 7.66667 8.66683Z" fill="#4A4957" stroke="#4A4957" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M7.66667 12.9998C8.03486 12.9998 8.33333 12.7014 8.33333 12.3332C8.33333 11.965 8.03486 11.6665 7.66667 11.6665C7.29848 11.6665 7 11.965 7 12.3332C7 12.7014 7.29848 12.9998 7.66667 12.9998Z" fill="#4A4957" stroke="#4A4957" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                                
+                                                            </span>
+
+                                                            <div class="dropdown-menu dropdown-menu-right dropup border-0 py-3 z-50 min-w-0 bg-neutral50" aria-labelledby="dropdownMenuButton" >
+                                                                <a class="dropdown-item flex items-center text-xs gap-2 py-2 text-neutral800 " href="#">
+                                                                    <span>
+                                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M10.5 2.99023C8.835 2.82523 7.16 2.74023 5.49 2.74023C4.5 2.74023 3.51 2.79023 2.52 2.89023L1.5 2.99023" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M4.25 2.485L4.36 1.83C4.44 1.355 4.5 1 5.345 1H6.655C7.5 1 7.565 1.375 7.64 1.835L7.75 2.485" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M9.42422 4.56982L9.09922 9.60482C9.04422 10.3898 8.99922 10.9998 7.60422 10.9998H4.39422C2.99922 10.9998 2.95422 10.3898 2.89922 9.60482L2.57422 4.56982" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M5.16406 8.25H6.82906" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M4.75 6.25H7.25" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                        </svg>
+                                                                    </span> Delete
+                                                                </a>
+                                                                <a class="dropdown-item flex items-center text-xs gap-2 text-neutral800 py-2" href="#">
+                                                                    <span>
+                                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M6.63164 1.80011L2.52663 6.14511C2.37163 6.31011 2.22163 6.63511 2.19163 6.86011L2.00663 8.48011C1.94163 9.06511 2.36163 9.46511 2.94163 9.36511L4.55164 9.09011C4.77664 9.05011 5.09163 8.88511 5.24663 8.71511L9.35164 4.37011C10.0616 3.62011 10.3816 2.76511 9.27664 1.72011C8.17663 0.685108 7.34164 1.05011 6.63164 1.80011Z" stroke="#25252C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M5.94531 2.5249C6.16031 3.9049 7.28031 4.9599 8.67031 5.0999" stroke="#25252C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M1.5 11H10.5" stroke="#25252C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            </svg>
+                                                                    </span> Edit
+                                                                </a>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </button>
+                                        </div>
+    
+                                    </div>
+
+                                
+                                </div>
+
+                                
+                                
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="text-gray-700 font-medium mb-3" for="mobile_money_account_name">Mobile money account name</label>
+                                <input id="mobile_money_account_name" type="text" placeholder="Enter your account name" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="mobile_money_account_name" autocomplete="off">
+                                
+                            </div>
+                            <div class="mb-6">
+                                <label class="text-gray-700 font-medium mb-3" for="mobile_money_account_number">Mobile money account number</label>
+                                <input id="mobile_money_account_number" type="text" placeholder="Enter your account number" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="mobile_money_account_number" autocomplete="off">
+                                
+                            </div>
+
+                           <div class="flex mx-auto w-full md:w-5/6">
+                               <button class="block bg-secondary w-full h-[50px] text-white bg-secondary transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded flex items-center justify-center" type="submit" >Add mobile money</button>
+                           </div>
+
+                        <div class="mt-10 mb-4 banner">
+                            <div class="flex items-start py-4 px-3 mb-2  text-sm justify-between bg-[#F1F0FB] border border-[#D0D5DD]  rounded-lg w-full text-[#667085]">
+                            <div class="flex items-center justify-start gap-2 pr-2">
+                                <span>
+
+                                    
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.0013 13.3332V9.99984M10.0013 6.6665H10.0096M18.3346 9.99984C18.3346 14.6022 14.6037 18.3332 10.0013 18.3332C5.39893 18.3332 1.66797 14.6022 1.66797 9.99984C1.66797 5.39746 5.39893 1.6665 10.0013 1.6665C14.6037 1.6665 18.3346 5.39746 18.3346 9.99984Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </span>
+                                
+                                
+                            </div>
+                            <div class="flex grow flex-col">
+                                    <p class=" font-normal text-sm mb-1 ">Confirm that all of the above information are correct as this would be shown to the customers. PiggyFi would not be responsible for loss due to wrong information</p>
+                            </div>
+                            <button class="btn btn-sm btn-label-brand btn-bold flex items-start" id="hideBanner" type="button">
+                                
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </button>
+                        </div>
+                    </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div> 
+            <!-- End of Add a new Bank -->
+
+
+            <!-- Transferwise w-96 md:w-[40em] max-w-lg-->
+            <div id="step1" class="dialog hidden fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-full max-w-[500px]  bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg overflow-y-auto  h-auto   max-h-full scrollbar-change">
+                <div class="">
+        
+                <div class="flex items-start justify-between mb-5">
+
+                    <div class="grow">
+                        <h1 class="text-xl font-semibold">Add payout details</h1>
+                    </div>
+
+                    
+                    <button class="btn btn-sm btn-label-brand btn-bold flex items-start" id="close">
+                        <span class="pointer-events-none">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>             
+                        
+                    </button>
+
+                </div>
+                    <div class="py-5 ">
+                        <form>
+                            <div class="mb-6">
+                                <div class=" dropdown relative  grow large-dropdown mb-4 " data-large-dropdown >
+                                    <button class="w-full bg-white h-12 focus:outline-none active:outline-none  flex items-center justify-between border border-neutral100 focus:border-gray_cl active:border-gray_cl px-4 py-3 mt-2 rounded" id="" data-large-dropdown-btn type="button" >
+                                        <span class="pointer-events-none text-neutral600  flex items-center justify-start gap-3 ">
+                                            
+                                            <img src="images/image 3.png">
+
+
+                                            Transferwise
+                                        
+                                        
+                                        </span>
+                                        <span class="pointer-events-none ">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-3 ml-2" role="img" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                
+                                                    <path d="M8.00099 11.7C7.53432 11.7 7.06766 11.5201 6.71432 11.1667L2.36766 6.82005C2.17432 6.62672 2.17432 6.30672 2.36766 6.11338C2.56099 5.92005 2.88099 5.92005 3.07432 6.11338L7.42099 10.4601C7.74099 10.7801 8.26099 10.7801 8.58099 10.4601L12.9277 6.11338C13.121 5.92005 13.441 5.92005 13.6343 6.11338C13.8277 6.30672 13.8277 6.62672 13.6343 6.82005L9.28766 11.1667C8.93432 11.5201 8.46766 11.7 8.00099 11.7Z" fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+
+                                    
+
+                                        <div class=" dropdown-menu large-dropdown px-3 py-3 shadow-box rounded-md w-full h-auto overflow-y-auto scrollbar-change ">
+                                                    
+                                            
+                                            <div class="py-2">
+                                                <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                    <div class="flex items-center justify-start gap-2 pr-2">
+                                                        <span class="pointer-events-none text-neutral600   ">
+                                                            <img src="images/bank.png">
+                                                        
+                                                        </span>   
+                                                    </div>
+                                                    <div class="flex grow flex-col justify-start items-start text-left">
+                                                            <p class="text-neutral700 font-normal text-base">Bank Account</p>
+                                                    </div>
+                                                </button>
+                                                <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                    <div class="flex items-center justify-start gap-2 pr-2">
+                                                        <span class="pointer-events-none text-neutral600   ">
+                                            
+                                                            <img src="images/image 4.png">
+                                                        
+                                                        </span>   
+                                                    </div>
+                                                    <div class="flex grow flex-col justify-start items-start text-left">
+                                                            <p class="text-neutral700 font-normal text-base">Mobile Money</p>
+                                                    </div>
+                                                </button>
+                                                <button class="flex items-start mb-3 py-2 px-1 text-sm justify-between bg-white border-0 rounded-lg w-full hover:bg-gray-100" type="button">
+                                                    <div class="flex items-center justify-start gap-2 pr-2">
+                                                        <span class="pointer-events-none text-neutral600   ">
+                                            
+                                                            <img src="images/image 3.png">
+                                                        
+                                                        </span>   
+                                                    </div>
+                                                    <div class="flex grow flex-col justify-start items-start text-left">
+                                                            <p class="text-neutral700 font-normal text-base">Transferwise</p>
+                                                    </div>
+                                                </button>
+                                                
+                                            
+                                            </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                            </div>
+                            <div class="mb-6">
+                                <label class="text-gray-700 font-medium mb-3" for="wise_email">Wise email</label>
+                                <input id="wise_email" type="email" placeholder="Enter your wise email" class="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="wise_email" autocomplete="off">
+                                
+                            </div>
+
+                            <div class="flex mx-auto w-full mt-12 md:w-5/6">
+                                <button class="block bg-secondary w-full h-[50px] text-white bg-secondary transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded flex items-center justify-center" type="button">Add transferwise</button>
+                            </div>
+                        </form>
+                    </div>
                 
+                </div>
+            </div>
+            <!-- End of Choose where do you want to withdraw to? -->
+
+
+
+
             </div>
 
         </div>

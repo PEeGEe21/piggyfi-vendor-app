@@ -399,6 +399,10 @@ nav.invoice-tab a {
   right: 0;
   left: auto;
 }
+.dropup {
+  bottom: 0;
+  top: auto;
+}
 
 @media (min-width: 576px) {
   .dropdown-menu-sm-left {
@@ -600,6 +604,29 @@ nav.invoice-tab a {
 }
 
 
+
+
+.coming_soon:disabled{
+  color: #4A4957 !important;
+  opacity: 0.5;
+}
+
+
+/* @media only screen and (max-width: 993px) { */
+
+@media only screen and (max-width: 776px){
+  .drop-shadow-lg{
+    filter: none !important;
+    /* top: 10px;
+    bottom: 10px; */
+
+  }
+}
+
+
+
+
+
 /* Style the tab */
 /* .tab {
   overflow: hidden;
@@ -634,4 +661,71 @@ nav.invoice-tab a {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+
+.fade-in {
+  animation: fadeIn 300ms;
+  -webkit-animation: fadeIn 300ms;
+  -moz-animation: fadeIn 300ms;
+  -o-animation: fadeIn 300ms;
+  -ms-animation: fadeIn 300ms;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-out {
+  animation: fadeOut 200ms;
+  -webkit-animation: fadeOut 200ms;
+  -moz-animation: fadeOut 200ms;
+  -o-animation: fadeOut 200ms;
+  -ms-animation: fadeOut 200ms;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-moz-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-ms-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
